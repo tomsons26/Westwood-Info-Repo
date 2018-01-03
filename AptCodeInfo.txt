@@ -1,5 +1,29 @@
 Official BFME2 and up UI systems enums, these are from another EA game but should match for the most part.
 
+
+typedef struct AptCharacterAnimation
+{
+   union {
+   (type???) AptCharacterSprite;
+   unsigned long Padding1;
+   };
+   unsigned long Padding2;
+   unsigned long Padding3;
+   int nCharacters;
+   AptCharacter * * apCharacters;
+   int nWidth;
+   int nHeight;
+   int nMillisecondsPerFrame;
+   int nImports;
+   AptImport * aImports;
+   int nExports;
+   AptExport * aExports;
+   int nCurrentConstantIndex;
+   union {
+   .. functions
+   };
+} AptCharacterAnimation;
+
 struct AptConstFile
 {
    char aMagic[20];
