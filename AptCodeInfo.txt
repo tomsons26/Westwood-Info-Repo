@@ -1,0 +1,526 @@
+Official BFME2 and up UI systems enums, these are from another EA game but should match for the most part.
+
+enum Actions
+{
+    AptActionInvalid=-1,
+    AptActionEnd=0,
+    AptActionNextFrame=4,
+    AptActionPrevFrame=5,
+    AptActionPlay=6,
+    AptActionStop=7,
+    AptActionToggleQuality=8,
+    AptActionStopSounds=9,
+    AptActionAdd=10,
+    AptActionSubtract=11,
+    AptActionMultiply=12,
+    AptActionDivide=13,
+    AptActionEquals=14,
+    AptActionLessThan=15,
+    AptActionAnd=16,
+    AptActionOr=17,
+    AptActionNot=18,
+    AptActionStringEquals=19,
+    AptActionStringLength=20,
+    AptActionSubString=21,
+    AptActionPop=23,
+    AptActionToInteger=24,
+    AptActionGetVariable=28,
+    AptActionSetVariable=29,
+    AptActionSetTarget2=32,
+    AptActionStringAdd=33,
+    AptActionGetProperty=34,
+    AptActionSetProperty=35,
+    AptActionCloneSprite=36,
+    AptActionRemoveSprite=37,
+    AptActionTrace=38,
+    AptActionStartDragMovie=39,
+    AptActionStopDragMovie=40,
+    AptActionStringLessThan=41,
+    AptActionCastOp=43,
+    AptActionImplementsOp=44,
+    AptActionThrow=42,
+    AptActionRandom=48,
+    AptActionMBLength=49,
+    AptActionCharToAscii=50,
+    AptActionAsciiToChar=51,
+    AptActionGetTimer=52,
+    AptActionMBSubString=53,
+    AptActionMBCharToAscii=54,
+    AptActionMBAsciiToChar=55,
+    AptActionDelete=58,
+    AptActionDelete2=59,
+    AptActionDefineLocal=60,
+    AptActionCallFunction=61,
+    AptActionReturn=62,
+    AptActionModulo=63,
+    AptActionNewObject=64,
+    AptActionDefineLocal2=65,
+    AptActionInitArray=66,
+    AptActionInitObject=67,
+    AptActionTypeOf=68,
+    AptActionTargetPath=69,
+    AptActionEnumerate=70,
+    AptActionAdd2=71,
+    AptActionLessThan2=72,
+    AptActionEquals2=73,
+    AptActionToNumber=74,
+    AptActionToString=75,
+    AptActionPushDuplicate=76,
+    AptActionStackSwap=77,
+    AptActionGetMember=78,
+    AptActionSetMember=79,
+    AptActionIncrement=80,
+    AptActionDecrement=81,
+    AptActionCallMethod=82,
+    AptActionNewMethod=83,
+    AptActionInstanceOf=84,
+    AptActionEnumerate2=85,
+    AptActionPushThis=86,
+    AptActionPushGlobal=88,
+    AptActionPush0=89,
+    AptActionPush1=90,
+    AptActionCallFuncAndPop=91,
+    AptActionCallFuncSetVar=92,
+    AptActionCallMethodPop=93,
+    AptActionCallMethodSetVar=94,
+    AptActionBitAnd=96,
+    AptActionBitOr=97,
+    AptActionBitXor=98,
+    AptActionBitLShift=99,
+    AptActionBitRShift=100,
+    AptActionBitURShift=101,
+    AptActionStrictEquals=102,
+    AptActionGreater=103,
+    AptActionExtends=105,
+    AptActionPushThisVariable=112,
+    AptActionPushGlobalVariable=113,
+    AptActionPushZeroSetVar=114,
+    AptActionPushTrue=115,
+    AptActionPushFalse=116,
+    AptActionPushNULL=117,
+    AptActionPushUndefined=118,
+    AptActionTraceStart=119,
+    AptActionGotoFrame=129,
+    AptActionGetUrl=131,
+    AptActionStoreRegister=135,
+    AptActionDefineDictionary=136,
+    AptActionWaitForFrame=138,
+    AptActionSetTarget=139,
+    AptActionGotoLabel=140,
+    AptActionDefineFunction2=142,
+    AptActionTry=143,
+    AptActionWith=148,
+    AptActionPush=150,
+    AptActionBranchAlways=153,
+    AptActionGetUrl2=154,
+    AptActionDefineFunction=155,
+    AptActionBranchIfTrue=157,
+    AptActionCallFrame=158,
+    AptActionGotoFrame2=159,
+    AptActionPushString=161,
+    AptActionPushStringDictByte=162,
+    AptActionPushStringDictWord=163,
+    AptActionPushStringGetVar=164,
+    AptActionPushStringGetMember=165,
+    AptActionPushStringSetVar=166,
+    AptActionPushStringSetMember=167,
+    AptActionStringDictByteGetVar=174,
+    AptActionStringDictByteGetMember=175,
+    AptActionDictCallFuncPop=176,
+    AptActionDictCallFuncSetVar=177,
+    AptActionDictCallMethodPop=178,
+    AptActionDictCallMethodSetVar=179,
+    AptActionPushFloat=180,
+    AptActionPushByte=181,
+    AptActionPushWord=182,
+    AptActionPushDWord=183,
+    AptActionBranchIfFalse=184,
+    AptActionPushRegister=185,
+    LastAptAction=186
+};
+
+enum AptCharacterType
+{
+    AptCharacterType_Shape=1,
+    AptCharacterType_Text=2,
+    AptCharacterType_Font=3,
+    AptCharacterType_Button=4,
+    AptCharacterType_Sprite=5,
+    AptCharacterType_Sound=6,
+    AptCharacterType_Bitmap=7,
+    AptCharacterType_Morph=8,
+    AptCharacterType_Animation=9,
+    AptCharacterType_StaticText=10,
+    AptCharacterType_None=11,
+    AptCharacterType_Video=12,
+    AptCharacterType_Level=15,
+    AptCharacterType_CustomControl=16,
+    AptCharacterType_Max=17
+};
+	
+enum AptGetBytesEnum
+{
+    AptGetBytesEnum_MovieClip=0,
+    AptGetBytesEnum_Sound=1,
+    AptGetBytesEnum_XML=2,
+    AptGetBytesEnum_LoadVars=3
+};
+	
+enum AptInputType
+{
+    AptInputType_MouseButton0=0,
+    AptInputType_Left=1,
+    AptInputType_Right=2,
+    AptInputType_Home=3,
+    AptInputType_End=4,
+    AptInputType_Insert=5,
+    AptInputType_Delete=6,
+    AptInputType_Backspace=8,
+    AptInputType_Enter=13,
+    AptInputType_Up=14,
+    AptInputType_Down=15,
+    AptInputType_PgUp=16,
+    AptInputType_PgDn=17,
+    AptInputType_Tab=18,
+    AptInputType_Escape=19,
+    AptInputType_ASCII32=32,
+    AptInputType_ASCII126=126,
+    AptInputType_MouseMovement=200,
+    AptKeycode_Left=37,
+    AptKeycode_Right=39,
+    AptKeycode_Home=36,
+    AptKeycode_End=35,
+    AptKeycode_Insert=45,
+    AptKeycode_Delete=46,
+    AptKeycode_Backspace=8,
+    AptKeycode_Enter=13,
+    AptKeycode_Up=38,
+    AptKeycode_Down=40,
+    AptKeycode_PgUp=33,
+    AptKeycode_PgDn=34,
+    AptKeycode_Tab=9,
+    AptKeycode_Escape=27,
+    AptInputType_PadSelect=300,
+    AptInputType_PadBack=300,
+    AptInputType_PadStart=301,
+    AptInputType_PadCross=302,
+    AptInputType_PadA=302,
+    AptInputType_PadCircle=303,
+    AptInputType_PadB=303,
+    AptInputType_PadTriangle=304,
+    AptInputType_PadX=304,
+    AptInputType_PadSquare=305,
+    AptInputType_PadY=305,
+    AptInputType_PadL1=306,
+    AptInputType_PadBlack=306,
+    AptInputType_PadR1=307,
+    AptInputType_PadWhite=307,
+    AptInputType_PadZTrigger=307,
+    AptInputType_PadL2=308,
+    AptInputType_PadL=308,
+    AptInputType_PadR2=309,
+    AptInputType_PadR=309,
+    AptInputType_PadL3=310,
+    AptInputType_PadR3=311,
+    AptInputType_Connected=400,
+    AptInputType_Disconnected=401,
+    AptInputType_LeftAnalogStick=501,
+    AptInputType_RightAnalogStick=502,
+    AptInputType_NumInputs=503
+};
+	
+enum AptCharacterButtonRecordState
+{
+    AptCharacterButtonRecordState_None=0,
+    AptCharacterButtonRecordState_Up=1,
+    AptCharacterButtonRecordState_Over=2,
+    AptCharacterButtonRecordState_Down=4,
+    AptCharacterButtonRecordState_HitTest=8
+};
+
+enum AptProceduralProperty
+{
+    AptProceduralProperty_X=0,
+    AptProceduralProperty_Y=1,
+    AptProceduralProperty_XScale=2,
+    AptProceduralProperty_YScale=3,
+    AptProceduralProperty_Width=4,
+    AptProceduralProperty_Height=5,
+    AptProceduralProperty_Rotation=6,
+    AptProceduralProperty_Alpha=7,
+    AptProceduralProperty_TR=8,
+    AptProceduralProperty_TG=9,
+    AptProceduralProperty_TB=10,
+    AptProceduralProperty_Visible=11,
+    AptProceduralProperty_Z=12,
+    AptProceduralProperty_YRot=13,
+    AptProceduralProperty_XRot=14,
+    AptProceduralProperty_NUMBER=15
+};
+
+enum AptInputController
+{
+    AptInputController_Keyboard=0,
+    AptInputController_Mouse=1,
+    AptInputController_Gamepad0=2,
+    AptInputController_Gamepad1=3,
+    AptInputController_Gamepad2=4,
+    AptInputController_Gamepad3=5,
+    AptInputController_Gamepad4=6,
+    AptInputController_Gamepad5=7,
+    AptInputController_Gamepad6=8,
+    AptInputController_Gamepad7=9,
+    AptInputController_NumControllers=10
+};	
+enum AptAnimLevelE
+{
+    AptAnimLevel_NONE=0,
+    AptAnimLevel_0=1,
+    AptAnimLevel_1=2,
+    AptAnimLevel_2=4,
+    AptAnimLevel_3=8,
+    AptAnimLevel_4=16,
+    AptAnimLevel_5=32,
+    AptAnimLevel_6=64,
+    AptAnimLevel_7=128,
+    AptAnimLevel_8=256,
+    AptAnimLevel_9=512,
+    AptAnimLevel_10=1024,
+    AptAnimLevel_11=2048,
+    AptAnimLevel_12=4096,
+    AptAnimLevel_13=8192,
+    AptAnimLevel_14=16384,
+    AptAnimLevel_15=32768,
+    AptAnimLevel_16=65536,
+    AptAnimLevel_17=131072,
+    AptAnimLevel_18=262144,
+    AptAnimLevel_19=524288,
+    AptAnimLevel_20=1048576,
+    AptAnimLevel_21=2097152,
+    AptAnimLevel_22=4194304,
+    AptAnimLevel_23=8388608,
+    AptAnimLevel_24=16777216,
+    AptAnimLevel_25=33554432,
+    AptAnimLevel_26=67108864,
+    AptAnimLevel_27=134217728,
+    AptAnimLevel_28=268435456,
+    AptAnimLevel_29=536870912,
+    AptAnimLevel_30=1073741824,
+    AptAnimLevel_31=-2147483648,
+    AptAnimLevel_ALL=-1
+};	
+enum AptMaskRenderOperation
+{
+    AptMaskRenderOperation_Subtract=-1,
+    AptMaskRenderOperation_None=0,
+    AptMaskRenderOperation_Add=1
+};
+
+enum AptVirtualFunctionTable_Indices
+{
+    AptVFT_xxx=0,
+    AptVFT_StringValue=1,
+    AptVFT_Property=2,
+    AptVFT_None=3,
+    AptVFT_Register=4,
+    AptVFT_Boolean=5,
+    AptVFT_Float=6,
+    AptVFT_Integer=7,
+    AptVFT_Lookup=8,
+    AptVFT_NativeFunction=9,
+    AptVFT_FrameStack=10,
+    AptVFT_Extern=11,
+    AptVFT_CharacterInstHandle=12,
+    AptVFT_Sound=13,
+    AptVFT_Array=14,
+    AptVFT_Math=15,
+    AptVFT_Key=16,
+    AptVFT_Global=17,
+    AptVFT_ScriptColour=18,
+    AptVFT_Object=19,
+    AptVFT_Prototype=20,
+    AptVFT_Date=21,
+    AptVFT_MovieClip=22,
+    AptVFT_Mouse=23,
+    AptVFT_XmlNode=24,
+    AptVFT_Xml=25,
+    AptVFT_XmlAttributes=26,
+    AptVFT_LoadVars=27,
+    AptVFT_TextFormat=28,
+    AptVFT_Extension=29,
+    AptVFT_GlobalExtension=30,
+    AptVFT_Stage=31,
+    AptVFT_Error=32,
+    AptVFT_StringObject=33,
+    AptVFT_ScriptFunction1=34,
+    AptVFT_ScriptFunction2=35,
+    AptVFT_ScriptFunctionByteCodeBlock=36,
+    AptVFT_CIHNone=37,
+    AptVFT_NumVFTs=38
+};
+	
+enum AptCmdParser::AptValueType
+{
+    AptTypeInt=0,
+    AptTypeFloat=1,
+    AptTypeBool=2,
+    AptTypeString=3,
+    AptTypeUndefined=4
+};
+
+enum AptStringAlignment
+{
+    AptStringAlignment_Left=0,
+    AptStringAlignment_Right=1,
+    AptStringAlignment_Center=2,
+    AptStringAlignment_None=3,
+    AptStringAlignment_Justify=4
+};
+
+0x0001ec80 : Length = 206, Leaf = 0x1203 LF_FIELDLIST
+	list[0] = LF_ONEMETHOD, public, VANILLA, index = 0x0001EC7C, name = 'AptMatrixCopy'
+	list[1] = LF_MEMBER, public, type = T_REAL32(0040), offset = 0
+		member name = 'a'
+	list[2] = LF_MEMBER, public, type = T_REAL32(0040), offset = 4
+		member name = 'b'
+	list[3] = LF_MEMBER, public, type = T_REAL32(0040), offset = 8
+		member name = 'c'
+	list[4] = LF_MEMBER, public, type = T_REAL32(0040), offset = 12
+		member name = 'd'
+	list[5] = LF_MEMBER, public, type = T_REAL32(0040), offset = 16
+		member name = 'tx'
+	list[6] = LF_MEMBER, public, type = T_REAL32(0040), offset = 20
+		member name = 'ty'
+		
+enum AptPlaceObjectFlags
+{
+    AptPlaceObjectFlag_None=0,
+    AptPlaceObjectFlag_Move=1,
+    AptPlaceObjectFlag_Character=2,
+    AptPlaceObjectFlag_Matrix=4,
+    AptPlaceObjectFlag_CXForm=8,
+    AptPlaceObjectFlag_Ratio=16,
+    AptPlaceObjectFlag_Name=32,
+    AptPlaceObjectFlag_DefineClip=64,
+    AptPlaceObjectFlag_Actions=128
+};
+
+enum TextFieldChangeE
+{
+    APT_TEXTFIELD_NONE=1,
+    APT_TEXTFIELD_FUPDATE=2,
+    APT_TEXTFIELD_DIRTY=4,
+    APT_TEXTFIELD_AUTOSIZE=8,
+    APT_TEXTFIELD_ASCHANGE=16,
+    APT_TEXTFIELD_BACKGROUND=32,
+    APT_TEXTFIELD_BGCOLOR=64,
+    APT_TEXTFIELD_BORDER=128,
+    APT_TEXTFIELD_BORDERCOLOR=256,
+    APT_TEXTFIELD_TEXTCHANGE=512,
+    APT_TEXTFIELD_TEXTCOLOR=1024,
+    APT_TEXTFIELD_TEXTWIDTH=2048,
+    APT_TEXTFIELD_WORDWRAP=4096,
+    APT_TEXTFIELD_HEIGHT=8192,
+    APT_TEXTFIELD_WIDTH=16384,
+    APT_TEXTFIELD_FONTCHANGE=32768,
+    APT_TEXTFIELD_FONTSIZE=65536,
+    APT_TEXTFIELD_ALIGNCHANGE=131072
+};	
+enum AptFontStyle
+{
+    AptFontStyle_Normal=0,
+    AptFontStyle_Bold=1,
+    AptFontStyle_Italic=16,
+    AptFontStyle_Underline=256,
+    AptFontStyle_StrikeThrough=4096,
+    AptFontStyle_isBoldSet=65536,
+    AptFontStyle_isItalicSet=1048576,
+    AptFontStyle_isUnderlineSet=16777216,
+    AptFontStyle_None=2
+};
+
+enum AptControlType
+{
+    AptControlType_DoAction=1,
+    AptControlType_FrameLabel=2,
+    AptControlType_PlaceObject2=3,
+    AptControlType_RemoveObject2=4,
+    AptControlType_BackgroundColour=5,
+    AptControlType_StartSound=6,
+    AptControlType_StartSoundStream=7,
+    AptControlType_DoInitAction=8
+};	
+enum AptActionConditionFlag
+{
+    AptActionConditionFlag_IdleToOverUp=1,
+    AptActionConditionFlag_OverUpToIdle=2,
+    AptActionConditionFlag_OverUpToOverDown=4,
+    AptActionConditionFlag_OverDownToOverUp=8,
+    AptActionConditionFlag_OverDownToOutDown=16,
+    AptActionConditionFlag_OutDownToOverDown=32,
+    AptActionConditionFlag_OutDownToIdle=64,
+    AptActionConditionFlag_IdleToOverDown=128,
+    AptActionConditionFlag_OverDownToIdle=256,
+    AptActionConditionFlag_KeyPress=65024
+};
+	
+enum AptEventActionFlag
+{
+    AptEventActionFlag_OnLoad=1,
+    AptEventActionFlag_EnterFrame=2,
+    AptEventActionFlag_Unload=4,
+    AptEventActionFlag_MouseMove=8,
+    AptEventActionFlag_MouseDown=16,
+    AptEventActionFlag_MouseUp=32,
+    AptEventActionFlag_KeyDown=64,
+    AptEventActionFlag_KeyUp=128,
+    AptEventActionFlag_Data=256,
+    AptEventActionFlag_Initialize=512,
+    AptEventActionFlag_Press=1024,
+    AptEventActionFlag_Release=2048,
+    AptEventActionFlag_ReleaseOutside=4096,
+    AptEventActionFlag_RollOver=8192,
+    AptEventActionFlag_RollOut=16384,
+    AptEventActionFlag_DragOver=32768,
+    AptEventActionFlag_DragOut=65536,
+    AptEventActionFlag_KeyPress=131072,
+    AptEventActionFlag_Construct=262144,
+    AptEventActionFlag_Wheel=524288,
+    AptEventActionFlag_KeyEvents=131264,
+    AptEventActionFlag_MouseEvents=654392,
+    AptEventActionFlag_InputEvents=131264,
+    AptEventActionFlag_AllEvents=131527
+};
+enum AptCIH::AptCIHState
+{
+    AptCIHState_Normal=0,
+    AptCIHState_Zombie=1,
+    AptCIHState_Deleted=2,
+    AptCIHState_Unloaded=3
+};
+
+enum AptInputState
+{
+    AptInputState_Pressed=0,
+    AptInputState_Released=1,
+    AptInputState_NumStates=2,
+    AptInputState_WheelUp=3,
+    AptInputState_WheelDown=4,
+    AptInputState_MouseMove=5
+};
+
+enum EA::aptaux::runtime::APTAUX_INPUT_TYPE
+{
+    APTAUX_INTPUT_TYPE_BUTTON=0,
+    APTAUX_INTPUT_TYPE_MOUSE_POSITION=1,
+    APTAUX_INTPUT_TYPE_ANALOG_INPUT=2,
+    APTAUX_INTPUT_TYPE_CUSTOM=3,
+    APTAUX_INTPUT_TYPE_INVALID=4
+};
+enum AptVariables::eAPTEXTVAR
+{
+    APTEXTVAR_PLATFORM=0,
+    APTEXTVAR_DEBUG=1,
+    APTEXTVAR_TRACE=2,
+    APTEXTVAR_COUNT=3
+};
