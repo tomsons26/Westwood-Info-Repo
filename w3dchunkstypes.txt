@@ -1,3 +1,5 @@
+These are all the chunk ID's i have been able to find so far including legacy things Westwood would have had in w3d_obsolete.h refered in the original w3d_file.h
+
 enum ChunkType {
 
     W3D_CHUNK_MESH                                      =0x00000000,        // Mesh definition 
