@@ -1,0 +1,257 @@
+-------------------------------
+RED ALERT KEY COMMAND REMAPPING
+-------------------------------
+
+Wild mouse errors are caused by a conflict between the PS/2 style mice and
+the use of certain key commands. Avoiding the use of the CRTL and ALT keys
+will generally keep the error from happening. As these keys are used quite
+often in the game, however, you may want to use the following metheod to
+remap the CTRL and ALT commands to a different key.
+
+Below are simple instructions on how to fix the 'wild mouse' problem in the
+DOS version of Red Alert. Because key remapping can be used for other
+purposes as well, a more detailed set of instructions follows. If you are
+not comfortable with changing settings on your computer, we recommend that
+you ONLY change what you need to.
+
+WARNING: Because you are editing the INI file for the game, it is HIGHLY
+recommended that you make a backup copy of the REDALERT.INI file before
+editing any information.
+
+
+
+I. FIXING THE WILD MOUSE PROBLEM
+
+If you have a PS/2 mouse, you will want to remap the CTRL and ALT keys to
+prevent the wild mouse effect. Since this is a DOS problem, we will look
+at the CTRL and ALT commands in the INI file.
+
+	1) Change to your Red Alert directory on your hard drive.
+	2) type EDIT REDALERT.INI <enter> - this will bring up the
+	   INI file for the game.
+	3) Find the section titled DOSHotKeys in brackets, as shown
+           below:
+
+	   [DOSHotkeys]
+	   KeyForceMove1=60
+	   KeyForceMove2=62
+	   KeyForceAttack1=58
+	   KeyForceAttack2=64
+
+	   These keys represent Left Alt, Right Alt, Left Ctrl, and Right
+           Ctrl in that order. 
+
+	4) Change the settings so that you have the following:
+
+	   [DOSHotkeys]
+	   KeyForceMove1=49
+	   KeyForceMove2=62
+	   KeyForceAttack1=48
+	   KeyForceAttack2=64
+
+	   This effectively remaps the Left Ctrl key to C, and the left ALT
+	   key to V. It also leaves the right CTRL and ALT keys available
+	   at the orginal settings.
+
+	5) Save the INI file.
+	6) Start the game. Remember that you now use 'C' to make groups and
+	   to force attack, and the 'V' key to force move.
+
+
+
+
+II. KEYBOARD REMAPPING IN RED ALERT: ADVANCED USERS
+
+
+WARNING: Because you are editing the INI file for the game, it is recommended
+that you remap the minimum amount of keys that will allow you to play
+without errors. Remapping too many keys may effect gameplay. It is HIGHLY
+recommended that you make a backup copy of the REDALERT.INI file before
+editing any information.
+
+To remap your keys, you will need to use a standard text editor to edit the
+REDALERT.INI file, located in your Red Alert game directory on the hard
+drive. There are two sections of the INI that concern key commands -
+DOSHotKeys and WinHotKeys. Each of these section names appear in brackets.
+Under each section title is a list of the various commands in the game,
+followed by a key assignment number.
+
+    To remap a key:
+
+        1) Find the command you wish to change.
+
+        2) Look up the key assignment number on the chart below for the key
+           you wish to assign the command to.
+
+	3) Change the number in the INI file.
+
+	4) Save the file and start the game.
+
+Thereafter, the command will be assigned to your chosen key, until you
+re-edit the INI file.
+
+NOTES:
+
+1) As you can see from the chart, the key assignment numbers are different
+   for the DOS and Windows versions of Red Alert. DO NOT use the assignment
+   numbers in the wrong version section of the game, as it can cause
+   unpredictable results.
+
+2) It is OK to assign more than one key to a single function, but it is NOT
+   OK to assign more than one function to a single key.
+
+
+Key Assignment Number Chart:
+
+KEY		DOS #	WIN95 #
+		
+NONE		0	0
+0		11	48
+1		2	49
+2		3	50
+3		4	51
+4		5	52
+5		6	53
+6		7	54
+7		8	55
+8		9	56
+9		10	57
+A		31	65
+B		50	66
+C		48	67
+D		33	68
+E		19	69
+F		34	70
+G		35	71
+H		36	72
+I		24	73
+J		37	74
+K		38	75
+L		39	76
+M		52	77
+N		51	78
+O		25	79
+P		26	80
+Q		17	81
+R		20	82
+S		32	83
+T		21	84
+U		23	85
+V		49	86
+W		18	87
+X		47	88
+Y		22	89
+Z		46	90
+-		12	--
+'		41	--
+/		55	--
+\		29	--
+,		53	--
+.		54	--
+;		40	--
+[		27	--
+]		28	--
+~		1	--
+=		13	--
+BACKSPACE	15	8
+CAP LOCK	30	20
+DELETE		76	46
+END		81	35
+ENTER		43	--
+ESC		110	27
+F1		112	112
+F2		113	113
+F3		114	114
+F4		115	115
+F5		116	116
+F6		117	117
+F7		118	118
+F8		119	119
+F9		120	120
+F10		121	121
+F11		122	122
+F12		123	123
+HOME		80	36
+INSERT		75	45
+L ALT		60	18
+L CTRL		58	17
+L SHIFT		44	16
+PAGE DOWN	86	--
+PAGE UP		85	--
+PAUSE		126	19
+PRINT SCREEN	124	44
+R ALT		62	18
+R CTRL		64	17
+R SHIFT		57	16
+SCROLL LOCK	125	145
+SPACE		61	32
+TAB		16	--
+UP ARROW	83	38
+LEFT ARROW	79	37
+RIGHT ARROW	89	39
+DOWN ARROW	84	40
+		
+NUMERIC KEYPAD		
+		
+NUM LOCK	90	144
+0		99	96
+1		93	97
+2		98	98
+3		103	99
+4		92	100
+5		97	101
+6		102	102
+7		97	103
+8		96	104
+9		101	105
+.		104	110
+ /		95	111
+*		100	106
+-		105	109
++		106	107
+ENTER		108	108
+
+
+
+
+EXAMPLE:
+
+Many people have requested that we allow the arrow keys to scroll the map
+rather than the scrollbar. This is possible using this feature. This example
+is specific to the Win95 version of the game. The key assignment numbers 
+are different for the DOS version, but the procedure is the same.
+
+In the Windows settings we have this:
+
+[WinHotkeys]
+KeySidebarUp=38
+KeySidebarDown=40
+KeyScrollLeft=0
+KeyScrollRight=0
+KeyScrollUp=0
+KeyScrollDown=0
+
+Notice that the scroll map functions are set to zero (no key). To allow the
+map to scroll with the keys, we have to assign the keys like so:
+
+[WinHotkeys]
+KeySidebarUp=0
+KeySidebarDown=0
+KeyScrollLeft=37
+KeyScrollRight=39
+KeyScrollUp=38
+KeyScrollDown=40
+
+Note that the Sidebar functions must be set to zero, otherwise you have two
+things happening with one key.
+
+
+FINAL WORD:
+
+While all of the game key commands can be remapped, we strongly recommend
+that you only change the ones you really need. Westwood Support will NOT
+give support to those that remap keys uneccessarily. If you find that the
+game does not work correctly with your new settings, use the backup copy of
+the REDALERT.INI file to restore the original settings.
+
+-Pat @ Westwood (12/23/96)
