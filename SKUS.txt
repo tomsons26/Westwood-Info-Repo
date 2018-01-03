@@ -1,0 +1,32 @@
+#define  WCHAT_SKU                                  1000
+#define  INTERNET_REG_APP_SKU                       1002
+#define  COMMAND_AND_CONQUER_95_SKU                 1003
+#define  RED_ALERT_SKU                              1005
+#define  COMMAND_AND_CONQUER_95_DE_SKU              1022
+#define  SOLE_SURVIVOR_SKU                          1040
+
+#define  RENEGADE_BASE_SKU                          3072
+#define  DUNE_2000_SKU                              3584
+#define  BLADE_RUNNER_SKU                           3841
+
+#define  TIBERIAN_SUN_SKU                           4608
+
+#define  LANDS_OF_LORE_III_SKU                      6401
+
+#define  EMPEROR_SKU                                7936
+
+#define  RED_ALERT_2_SKU                            8448
+
+#define  NOX_SKU                                    9472
+
+#define  YURIS_REVENGE_SKU                          10496
+
+#define  RENEGADE_FDS_SKU                           12288
+#define  EARTH_AND_BEYOND_SKU                       12800
+
+#define  RENEGADE_DEMO_SKU                          13056
+
+#define  WOL_REGISTER_APP_SKU                       32256
+#define  WOLAPI_SKU                                 32512
+
+#define  WOLBROWSER_SKU                             65536
