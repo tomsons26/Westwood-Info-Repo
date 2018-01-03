@@ -1,6 +1,20 @@
 Official BFME2 and up UI systems enums, these are from another EA game but should match for the most part.
 
 
+typedef struct AptCharacterSprite
+{
+   AptMovie movie
+   {
+      int nFrames;
+      AptFrame * aFrames;
+      class AptNativeHash * phLabels;
+      union {
+      .. functions
+      };
+   }
+} AptCharacterSprite;
+
+
 typedef struct AptCharacterAnimation
 {
    union {
