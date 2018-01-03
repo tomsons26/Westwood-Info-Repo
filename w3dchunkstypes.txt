@@ -79,9 +79,9 @@ enum ChunkType {
                     W3D_CHUNK_PER_FACE_TEXCOORD_IDS     =0x0000004B,        // indices to W3D_CHUNK_STAGE_TEXCOORDS, (array of Vector3i)
 
         W3D_CHUNK_FX_SHADERS                            =0x00000050,        //@ W3D_CHUNK_Fx_SHADERS APPEARS FIRST IN BFME2 SEEMS
-            W3D_CHUNK_Fx_SHADER,
-            W3D_CHUNK_Fx_SHADER_INFO,
-            W3D_CHUNK_Fx_SHADER_CONSTANT,       
+            W3D_CHUNK_FX_SHADER,
+            W3D_CHUNK_FX_SHADER_INFO,
+            W3D_CHUNK_FX_SHADER_CONSTANT,
 
         W3D_CHUNK_DEFORM                                =0x00000058,        // mesh deform or 'damage' information.
             W3D_CHUNK_DEFORM_SET                        =0x00000059,        // set of deform information
@@ -197,5 +197,7 @@ enum ChunkType {
     W3D_CHUNK_UNKNOWN_REN2                              =0x00000B00,        // @ appears in Renegade 2 Grizzly, Prism, Rhino, Vulture models, seems to be mesh parts
     
     W3D_CHUNK_SECONDARY_VERTICES                        =0x00000C00,        // @ called VERTICES_COPY by the community
-    W3D_CHUNK_SECONDARY_VERTEx_NORMALS,                                     // @ called VERTEx_NORMALS_COPY by the community
+    W3D_CHUNK_SECONDARY_VERTEX_NORMALS,                                     // @ called VERTEX_NORMALS_COPY by the community
+    
+    W3D_CHUNK_LIGHTMAP_UV                               =0x00000C02,        // @
 };
