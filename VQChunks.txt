@@ -1,0 +1,394 @@
+//Note
+//If chunk struct not specified it's just the standard IFF chunk structure
+struct IFFChunk
+{
+  char  ID[4];
+  int	Size;
+}
+
+
+
+
+
+/*CLIP Chunk
+
+----------------------------------
+CLIP
+----------------------------------
+*/
+
+struct CLIPChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+//End of CLIP Chunk
+
+
+/*CIN? Chunk
+
+----------------------------------
+CINF
+----------------------------------
+	CINH
+	CIND
+----------------------------------
+*/
+
+struct CINHChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct CINDChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+//End of CIN Chunk
+
+
+
+
+
+/*MSC? Chunk
+
+----------------------------------
+MSCI
+----------------------------------
+	MSCH
+----------------------------------
+	MSCT
+		VIEW
+		ZBUF
+----------------------------------
+*/
+
+struct MSCHChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct MSCTChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct VIEWChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  int 	FrameNumber;
+  float Matrix4x3[12]; //Little endian
+  float	FOVX; // Only in X direction
+};
+
+struct ZBUFChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  int 	Width;
+  int 	Height;
+  int 	LZOCompressed; //"complete" in ScummVM BR code //<madmoose> In ZBUF, complete means that the entire zbuffer frame is LZO1-compressed in the data otherwise only the difference from the last zbuffer frame is encoded
+  int	Unknown2; // Doesn't appear to be used at all in BR
+  char	ZBufferData[Size - 16];
+};
+
+//End of MSCI Chunk
+
+
+/*MFCI Chunk
+
+----------------------------------
+MFCI
+----------------------------------
+	MFCH
+	MFCD
+	MFCT
+----------------------------------
+*/
+
+struct MFCHChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct MFCDChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+
+//End of MFCI Chunk
+
+
+//LIN? Chunk
+
+struct LoopInfo
+{
+  uint16 LoopStart;
+  uint16 LoopEnd;
+};
+
+/*
+----------------------------------
+LINF
+----------------------------------
+	LINH
+	LIND
+----------------------------------
+*/
+
+struct LINHChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  uint16 LoopCount;
+  uint32 Flags;
+};
+
+struct LINDChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  LoopInfo Loops[Size / sizeof(LoopInfo)]; // LoopInfo Loops[LoopCount];
+};
+
+//End of Loop Chunk
+
+
+/*Loop Name Chunk
+
+----------------------------------
+LNIN
+----------------------------------
+	LNIH
+	LNIO
+	LNID
+----------------------------------
+*/
+
+struct LNIHChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct LNIOChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct LNIDChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	String[Size];
+};
+
+//End of Loop Name Chunk
+
+
+/*VQFR Name Chunk
+
+----------------------------------
+VQFR
+----------------------------------
+	CBFZ
+	VPTR
+----------------------------------
+*/
+
+struct VQFRChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct CBFZChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct VPTRChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+//End of VQFR Name Chunk
+
+
+
+
+
+
+
+
+
+struct VQAHeader
+{
+  int16	Version;
+  int16	Flags;
+  int16	Frames;
+  int16	ImageWidth;
+  int16	ImageHeight;
+  char	BlockWidth;
+  char	BlockHeight;
+  char	FPS;
+  char	Groupsize;
+  int16	Num1Colors;
+  int16	CBentries;
+  int16	Xpos;
+  int16	Ypos;
+  int16	MaxFramesize;
+  int16	SampleRate;
+  char	Channels;
+  char	BitsPerSample;
+  int16	Streams;
+  int	UnknownFlags;
+  int	Unknown;
+  int	UnknownSampleRate;
+};
+
+struct FORMChunk
+{
+  char  ID[4];
+  int	Size;
+};
+
+struct VQHDChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  VQAHeader header;
+};
+
+struct NAMEChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	String[Size];
+};
+
+struct FINFChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct VQFLChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+
+struct CPL0Chunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct CBF0Chunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct SND1Chunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct SN2JChunk // <madmoose> SN2J is jump-information for SND2-decoding
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  uint16 stepIndex;
+  uint predictor;
+};
+
+struct SND2Chunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct AESCChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct VPRZChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
+
+struct LITEChunk
+{
+  char  ID[4];
+  int	Size;
+  /* Chunk data starts here */
+  char	UnknownData[Size];
+};
