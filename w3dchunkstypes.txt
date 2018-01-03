@@ -1,14 +1,47 @@
 These are all the chunk ID's i have been able to find so far including legacy things Westwood would have had in w3d_obsolete.h refered in the original w3d_file.h
 
+@ symbolizes entries added after initial import
+
 enum ChunkType {
 
-    W3D_CHUNK_MESH                                      =0x00000000,        // Mesh definition 
+    W3D_CHUNK_MESH                                      =0x00000000,        // Mesh definition
+        W3D_CHUNK_MESH_HEADER                           =0x00000001,        // @
         W3D_CHUNK_VERTICES                              =0x00000002,        // array of vertices (array of W3dVectorStruct's)
         W3D_CHUNK_VERTEX_NORMALS                        =0x00000003,        // array of normals (array of W3dVectorStruct's)
+        W3D_CHUNK_SURRENDER_NORMALS                     =0x00000004,        // @
+        W3D_CHUNK_TEXCOORDS                             =0x00000005,        // @
+        O_W3D_CHUNK_MATERIALS                           =0x00000006,        // @
+        O_W3D_CHUNK_TRIANGLES                           =0x00000007,        // @
+        O_W3D_CHUNK_QUADRANGLES                         =0x00000008,        // @
+        O_W3D_CHUNK_SURRENDER_TRIANGLES                 =0x00000009,        // @
+        O_W3D_CHUNK_POV_TRIANGLES                       =0x0000000A,        // @
+        O_W3D_CHUNK_POV_QUADRANGLES                     =0x0000000B,        // @
         W3D_CHUNK_MESH_USER_TEXT                        =0x0000000C,        // Text from the MAX comment field (Null terminated string)
+        W3D_CHUNK_VERTEX_COLORS                         =0x0000000D,        // @
         W3D_CHUNK_VERTEX_INFLUENCES                     =0x0000000E,        // Mesh Deformation vertex connections (array of W3dVertInfStruct's)
+        
+        W3D_CHUNK_DAMAGE                                =0x0000000F,        // @ This chunk is used extensively in Earth & Beyond
+            W3D_CHUNK_DAMAGE_HEADER,
+            W3D_CHUNK_DAMAGE_VERTICES,
+            W3D_CHUNK_DAMAGE_COLORS,
+            W3D_CHUNK_DAMAGE_MATERIALS,
+        
+        O_W3D_CHUNK_MATERIALS2                          =0x00000014,        // @
+        
+        W3D_CHUNK_MATERIALS3                            =0x00000015,        // @
+            W3D_CHUNK_MATERIAL3,
+            W3D_CHUNK_MATERIAL3_NAME,
+            W3D_CHUNK_MATERIAL3_INFO,
+            W3D_CHUNK_MATERIAL3_DC_MAP,                 =0x00000019,        // @
+                W3D_CHUNK_MAP3_FILENAME,
+                W3D_CHUNK_MAP3_INFO,
+            W3D_CHUNK_MATERIAL3_DI_MAP,
+            W3D_CHUNK_MATERIAL3_SC_MAP,
+            W3D_CHUNK_MATERIAL3_SI_MAP,
+        
         W3D_CHUNK_MESH_HEADER3                          =0x0000001F,        //  mesh header contains general info about the mesh. (W3dMeshHeader3Struct)
         W3D_CHUNK_TRIANGLES                             =0x00000020,        // New improved triangles chunk (array of W3dTriangleStruct's)
+        W3D_CHUNK_PER_TRI_MATERIALS                     =0x00000021,        // @
         W3D_CHUNK_VERTEX_SHADE_INDICES                  =0x00000022,        // shade indexes for each vertex (array of uint32's)
             
         W3D_CHUNK_PRELIT_UNLIT                          =0x00000023,        // optional unlit material chunk wrapper
@@ -38,17 +71,25 @@ enum ChunkType {
                 W3D_CHUNK_DCG                           =0x0000003B,        // per-vertex diffuse color values (array of W3dRGBAStruct's)
                 W3D_CHUNK_DIG                           =0x0000003C,        // per-vertex diffuse illumination values (array of W3dRGBStruct's)
                 W3D_CHUNK_SCG                           =0x0000003E,        // per-vertex specular color values (array of W3dRGBStruct's)
+                W3D_CHUNK_NRG                           =0x0000003F,        // @ Name guessed, guess made by logical order, BFME2 W3Ds seem to confirm Normal Map related
 
                 W3D_CHUNK_TEXTURE_STAGE                 =0x00000048,        // wrapper around a texture stage.
                     W3D_CHUNK_TEXTURE_IDS               =0x00000049,        // single or per-tri array of uint32 texture indices (check chunk size)
                     W3D_CHUNK_STAGE_TEXCOORDS           =0x0000004A,        // per-vertex texture coordinates (array of W3dTexCoordStruct's)
                     W3D_CHUNK_PER_FACE_TEXCOORD_IDS     =0x0000004B,        // indices to W3D_CHUNK_STAGE_TEXCOORDS, (array of Vector3i)
 
+        W3D_CHUNK_FX_SHADERS                            =0x00000050,        //@ W3D_CHUNK_Fx_SHADERS APPEARS FIRST IN BFME2 SEEMS
+            W3D_CHUNK_Fx_SHADER,
+            W3D_CHUNK_Fx_SHADER_INFO,
+            W3D_CHUNK_Fx_SHADER_CONSTANT,       
 
         W3D_CHUNK_DEFORM                                =0x00000058,        // mesh deform or 'damage' information.
             W3D_CHUNK_DEFORM_SET                        =0x00000059,        // set of deform information
                 W3D_CHUNK_DEFORM_KEYFRAME               =0x0000005A,        // a keyframe of deform information in the set
                     W3D_CHUNK_DEFORM_DATA               =0x0000005B,        // deform information about a single vertex
+
+        W3D_CHUNK_TANGENTS                              =0x00000060,        // @
+        W3D_CHUNK_BINORMALS                             =0x00000061,        // @ some places on the web its called W3D_CHUNK_BITANGENTS
 
         W3D_CHUNK_PS2_SHADERS                           =0x00000080,        // Shader info specific to the Playstation 2.
         
@@ -71,6 +112,7 @@ enum ChunkType {
         W3D_CHUNK_COMPRESSED_ANIMATION_HEADER,                              // describes playback rate, number of frames, and type of compression
         W3D_CHUNK_COMPRESSED_ANIMATION_CHANNEL,                             // compressed channel, format dependent on type of compression
         W3D_CHUNK_COMPRESSED_BIT_CHANNEL,                                   // compressed bit stream channel, format dependent on type of compression
+        W3D_CHUNK_COMPRESSED_ANIMATION_MOTION_CHANNEL,                      // @ appears first in BFME seems
         
     W3D_CHUNK_MORPH_ANIMATION                           =0x000002C0,        // hierarchy morphing animation data (morphs between poses, for facial animation)
         W3D_CHUNK_MORPHANIM_HEADER,                                         // W3dMorphAnimHeaderStruct describes playback rate, number of frames, and type of compression
@@ -118,6 +160,7 @@ enum ChunkType {
         W3D_CHUNK_EMITTER_ROTATION_KEYFRAMES,                               // rotation keys for the particles
         W3D_CHUNK_EMITTER_FRAME_KEYFRAMES,                                  // frame keys (u-v based frame animation)
         W3D_CHUNK_EMITTER_BLUR_TIME_KEYFRAMES,                              // length of tail for line groups
+        W3D_CHUNK_EMITTER_UNKNOWN_CHUNK_TYPE,                               // @ ENB HAS THIS has this https://github.com/therealkyp/earth-and-beyond-server/blob/master/trunk/net7tools/chunktypes/chunktypes.cpp#l184 //0x50d is in shockfizzle03.w3d
 
     W3D_CHUNK_AGGREGATE                                 =0x00000600,        // description of an aggregate object
         W3D_CHUNK_AGGREGATE_HEADER,                                         // general information such as name and version
@@ -151,4 +194,8 @@ enum ChunkType {
         W3D_CHUNK_SOUNDROBJ_HEADER,                                         // general information such as name and version
         W3D_CHUNK_SOUNDROBJ_DEFINITION,                                     // chunk containing the definition of the sound that is to play 
 
+    W3D_CHUNK_UNKNOWN_REN2                              =0x00000B00,        // @ appears in Renegade 2 Grizzly, Prism, Rhino, Vulture models, seems to be mesh parts
+    
+    W3D_CHUNK_SECONDARY_VERTICES                        =0x00000C00,        // @ called VERTICES_COPY by the community
+    W3D_CHUNK_SECONDARY_VERTEx_NORMALS,                                     // @ called VERTEx_NORMALS_COPY by the community
 };
