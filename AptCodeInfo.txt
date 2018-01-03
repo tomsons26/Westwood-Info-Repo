@@ -1,5 +1,27 @@
 Official BFME2 and up UI systems enums, these are from another EA game but should match for the most part.
 
+struct AptConstFile
+{
+ char aMagic[20];
+ void* pMainCharacter;
+ AptConstantTable* aConstants;
+}
+
+struct AptConstantTable
+{
+  AptVirtualFunctionTable_Indices eType;
+  
+  union
+  {
+    const char* szString;
+    float fFloat;
+    int nInteger;
+    int nRegister;
+    int bBoolean;
+    unsigned int nLookup;
+  };
+};
+
 enum Actions
 {
     AptActionInvalid=-1,
