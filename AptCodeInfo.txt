@@ -23,6 +23,27 @@ struct AptConstantTable
   };
 };
 
+typedef struct AptCharacterFont
+{
+   char * szName;
+   int nGlyphs;
+   AptCharacter * * apGlyphs;
+} AptCharacterFont;
+
+typedef struct AptCharacterText
+{
+   AptRect rBounds;
+   int nFontID;
+   int eAlignment;
+   int nColour;
+   float fFontHeight;
+   int bReadOnly;
+   int bMultiLine;
+   int bWordWrap;
+   char * szInitialText;
+   char * szVariable;
+} AptCharacterText;
+
 typedef struct AptCharacterButtonRecord
 {
    int eStates;
