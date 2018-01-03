@@ -23,6 +23,30 @@ struct AptConstantTable
   };
 };
 
+typedef struct AptCharacterButtonRecord
+{
+   int eStates;
+   AptCharacter * pCharacter;
+   int nLayer;
+   AptMatrix matrix;
+   AptFloatArrayCXForm cxform;
+} AptCharacterButtonRecord;
+
+typedef struct AptCharacterButton
+{
+   int bIsMenu;
+   AptRect mHitTestBoundingRect;
+   int mHitTestTriangles;
+   int mHitTestVertexCount;
+   float * mHitTestVertexTable;
+   short * mHitTestIndexTable;
+   int nButtonRecords;
+   AptCharacterButtonRecord * aButtonRecords;
+   int nActionConditions;
+   AptActionConditionBlock * aActionConditions;
+   AptCharacterButtonSound * pButtonSound;
+} AptCharacterButton;
+
 enum Actions
 {
     AptActionInvalid=-1,
