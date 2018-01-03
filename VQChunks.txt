@@ -256,14 +256,6 @@ struct VPTRChunk
 
 //End of VQFR Name Chunk
 
-
-
-
-
-
-
-
-
 struct VQAHeader
 {
   int16	Version;
@@ -283,10 +275,12 @@ struct VQAHeader
   int16	SampleRate;
   char	Channels;
   char	BitsPerSample;
-  int16	Streams;
-  int	UnknownFlags;
-  int	Unknown;
-  int	UnknownSampleRate;
+  int16	AltSampleRate; //Streams in pre C&C VQA Version
+  char	AltChannels; //char FutureUse[12] in pre C&C VQA Version
+  char	AltBitsPerSample;
+  int16	Unknown20;
+  dword MaxCBFZSize;
+  dword Unknown26;
 };
 
 struct FORMChunk
