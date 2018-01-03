@@ -2,15 +2,16 @@ Official BFME2 and up UI systems enums, these are from another EA game but shoul
 
 struct AptConstFile
 {
- char aMagic[20];
- void* pMainCharacter;
- AptConstantTable* aConstants;
-}
+   char aMagic[20];
+   AptCharacter * pMainCharacter; //points to a class with unions of new/delete operators and "int eType" no clue........
+   int nConstants;
+   AptConstantTable * aConstants;
+};
+
 
 struct AptConstantTable
 {
   AptVirtualFunctionTable_Indices eType;
-  
   union
   {
     const char* szString;
