@@ -1,28 +1,28 @@
 ShapeHeaderStruct{
   word A // Unknown purpose, the game checks if its -1
-  word	Width
-  word	Height
-  word	FrameCount
+  word  Width
+  word  Height
+  word  FrameCount
 }
 
 ShapeFrameHeader{
-word	OffsetX
-word	OffsetY
-										        //These are offsets that determine where the rectangle that's formed from DrawnWidth and DrawnHeight is							
-word	DrawnWidth						//The Width of the actually drawn or prioritized pixels from this frame, if 0 assumed all
-word	DrawnHeight						//The Height of the actually drawn or prioritized pixels from this frame, if 0 assumed all                          //First Byte is apparently a Bitfield, rest are unknown, maybe other bitfields
+word    OffsetX
+word    OffsetY
+                                        // These are offsets that determine where the rectangle that's formed from DrawnWidth and DrawnHeight is                         
+word    DrawnWidth                      // The Width of the actually drawn or prioritized pixels from this frame, if 0 assumed all
+word    DrawnHeight                     // The Height of the actually drawn or prioritized pixels from this frame, if 0 assumed all                          //First Byte is apparently a Bitfield, rest are unknown, maybe other bitfields
 dword    Bitfield
-        1   Has extra data infront of every frame? ShapeSet set it to 1 with the -x command line TS crashes if a shp is made with the ShapeSet's -x command line
-        2   Is RLE Compressed
+        1                               // Has extra data infront of every frame? ShapeSet set it to 1 with the -x command line TS crashes if a shp is made with the ShapeSet's -x command line
+        2                               // Is RLE Compressed
 
-stuct 	CommonColor{					// used for Radar color, its the average color of the whole image
-	byte	Red
-	byte	Green
-	byte	Blue
-	byte	Alpha or special Flags?		//CommonColor is read as a dword in the code, so either the forth value is Alpha or its some drawing Flags, could as well be Padding
+stuct   CommonColor{                    // used for Radar color, its the average color of the whole image
+    byte    Red
+    byte    Green
+    byte    Blue
+    byte    Alpha or special Flags?     // CommonColor is read as a dword in the code, so either the forth value is Alpha or its some drawing Flags, could as well be Padding
 }
-dword	Unknown						   	//Previously called Zero as it was assumed its a padding, welp someone should have checked the files :P
-										        //In infshdw and gclock2 this is 00 FB 12 00, in c_shadow its CC CC CC CC
-dword	FileOffset						//Offset where the actual image data for this frame is located in the file
-word	Unknown							  //Set when a SHP is made with ShapeSets -x command line LIKELY ONLY VALID FOR RA2
+dword   Unknown                         // Previously called Zero as it was assumed its a padding, welp someone should have checked the files :P
+                                        //In infshdw and gclock2 this is 00 FB 12 00, in c_shadow its CC CC CC CC
+dword   FileOffset                      //Offset where the actual image data for this frame is located in the file
+word    Unknown                         //Set when a SHP is made with ShapeSets -x command line LIKELY ONLY VALID FOR RA2
 }
