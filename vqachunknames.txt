@@ -4,7 +4,7 @@ FORM
 ..ZBUF              //ZBUFfer data                    //Used in BR only?
 ..SND0              //SouND0                         //PCM Audio
 ..SND1              //SouND1                         //WS ADPCM
-..SND2              //SouND2                         //SOSCodec (IMA ADPCM) Audio
+..SND2              //SouND2                         //IMA ADPCM Audio
 ..SN2J              //SouNd2 Jumptable               //<madmoose> SN2J is jump-information for SND2-decoding
 ..VIEW              //VIEWport                       //3x4 Matrix. Used in BR only?
 ..AESC              //Something Pal related          //Used in BR only?
