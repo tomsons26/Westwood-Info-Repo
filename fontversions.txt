@@ -1,0 +1,44 @@
+WWFont:
+
+Version 1
+Wargame Construction Set
+A Nightmare On Elm Street
+DragonStrike
+Circuit's Edge
+
+Version 2
+BattleTech The Crescent Hawk's Revenge
+Eye of the Beholder
+Eye of the Beholder II The Legend of Darkmoon
+
+Version 3
+The Legend of Kyrandia
+Dune II
+Lands of Lore The Throne of Chaos
+The Legend of Kyrandia Hand of Fate
+The Legend of Kyrandia Malcolm's Revenge
+The Legend of Kyrandia Malcolm's Revenge Installer
+Command & Conquer
+Command & Conquer Installer
+Command & Conquer Red Alert
+Command & Conquer Red Alert Installer
+Lands of Lore Guardians of Destiny
+Lands of Lore Guardians of Destiny Installer
+Command & Conquer Sole Survivor
+Lands of Lore III
+
+Version 4
+Tiberian Sun
+Tiberian Sun Installer
+Tiberian Sun Firestorm
+Tiberian Sun Firestorm Installer
+Lands of Lore III Installer
+
+
+
+BitFont:
+
+Version 1
+NoX
+Command & Conquer Red Alert 2
+Command & Conquer Yuri's Revenge
