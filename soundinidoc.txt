@@ -1,0 +1,312 @@
+; SOUND.INI 
+; All sounds in the game are specified here. The sound must 
+; first be specified in the sound list section. Then the appropriate 
+; sound data should be specified for those sounds that differ from 
+; the default ratings. 
+
+;[NameOfSoundEvent] ; Name of new sound event (up to 31 characters) 
+;Control=           ; <ALL LOOP RANDOM PREDELAY INTERRUPT ATTACK DECAY AMBIENT> 
+;Sounds=            ; <list of sounds> 
+;Volume=            ; <0..100>                (100 = full volume) 
+;Delay=             ; minDelay maxDelay (milliseconds) 
+;Priority=          ; <LOWEST LOW NORMAL HIGH CRITICAL> 
+;Type=              ; <AMBIENT VIOLENT MOVEMENT QUIET LOUD GLOBAL SCREEN LOCAL PLAYER NORMAL GUN_SHY NOISE_SHY UNSHROUD SHROUD> 
+;FShift=            ; minFrequenceDelta maxFrequencyDelta (in percent delta from normal pitch) 
+;VShift=            ; max volume drop 
+;Limit=             ; max number of events at one time 
+;Range=             ; number of cells 
+;Loop=              ; stop looping after this many iterations - loop control must be set 
+;MinVolume=         ; minimum volume for GLOBAL Type event (ignored for all other types) 
+;Attack=            ; number of sounds at start of sounds list that are attack sounds 
+;Decay=             ; number of sounds at end of sounds list that are decay sounds 
+
+
+; the defaults for all events 
+[Defaults] 
+MinVolume=50 
+Range=10 
+Volume=80 
+Limit=5 
+Type= NORMAL SCREEN UNSHROUD 
+Priority=NORMAL 
+
+;----------------------------------------------------------------------- 
+; 
+;Explaination of the following attributes: 
+; 
+; Control 
+; Sounds 
+; Volume 
+; Delay 
+; Priority 
+; Type 
+; FShift 
+; VShift 
+; Limit 
+; Range 
+; Loop 
+; MinVolume 
+; Attack 
+; Decay 
+; 
+; 
+; CONTROL: 
+; 
+;    Syntax:    Control = <all loop random predelay interrupt attack decay ambient> 
+; 
+; The control attributes can be used in any combination to achieve desired 
+; playback effects. 
+; The default control behaviour is to play the 
+; first sound in the sound list just once. The following control keywords 
+; can be used to: 
+; 
+;    all 
+;         Use all sounds in sound list. 
+; 
+;    loop 
+;         Continually play sound event. Loop attribute can be used to 
+;         specify how many times to loop the event. 
+
+;         //Comments from CnC3 which also uses this audio engine. 
+;         With this flag, the sound will play an Attack sound, and then 
+;         play one of the sounds from the Sounds lists forever until something kills the sound, at 
+;         which point it will play a Decay sound. Without this flag, the sound would just play 
+;         1 Attack, 1 Sound, and 1 Decay sound. 
+;         Sounds with this flag are sometimes known as "permanent" sound, while sounds without 
+;         this flag are known as "one-shot" sounds. In general, you can use a one-shot sound 
+;         where a permanent sound is expected; for instance, as the sound for a Large Group Audio 
+;         map, or as a move loop. However, you should NOT use permanent sounds where one-shot 
+;         sounds are expected; the code will not kill the sound and it will last until the level is 
+;         exited. 
+; 
+;    random 
+;         Randomly pick sound from sound list to play. 
+; 
+;    predelay 
+;         Normally if the DELAY attribute is specified the delay happens 
+;         when the sound finishes playing. PREDELAY forces the delay to 
+;         happen at the start of the sound. Random predelays help avoid 
+;         'phasing' when multiple instances of the same audio event happen 
+;         at the same time. 
+; 
+;    interrupt 
+;         This new instances of this type sound event have priority over 
+;         already playing instances. 
+; 
+;    attack 
+;         Specifies that the first sound in the sound list gets played, 
+;         regardless, at the start of the audio event (see ATTACK attribute 
+;         also). This sound is called the attack sound. 
+; 
+; 
+;    decay 
+;         Specifies that the last sound in the sound list gets played, 
+;         regardless, at the end of the audio event. ( see DECAY attribute 
+;         also). This sound is called the decay sound. 
+; 
+; 
+; 
+;    ambient 
+;         Specifies that this sound is a ambient sound. 
+; 
+; 
+; SOUND: 
+; 
+;   Syntax:     Sounds = {$}<sound1> {$}<sound2> ...{$}<sound32> 
+; 
+; Up to 32 sound files can be associated with an audio event. Do not 
+; specify path or extension of the file, just the name of the file. The 
+; file name must not be more that 31 characters. If there are spaces in the 
+; filename then enclose the name in double quotes(e.g. "Big Bad Sound"). 
+; However, avoid using spaces if possible. 
+; 
+; The sound files should be WAVE format. We currently support IMA ADPCM, PCM, 
+; Stereo, Mono at any sample rate. For best performance, use Mono 
+; 22050Hz. 
+; 
+; Any sounds that require localization must have a dollar sign ($) in front 
+; of their names in the sound list (not in the filename itself). 
+; 
+; NOTE: all sound files should be normalized 
+; 
+; 
+; VOLUME: 
+; 
+;    Syntax:    Volume = <0..100> 
+; 
+; Volume level playback for audio event. We assume that all sounds are 
+; normalized. Use this attribute to set the mixing levels for audio. 
+; The value specified is the percentage of full volume. e.g. 25 means 
+; playback at one quarter of full volume. 
+; 
+; 
+; DELAY 
+; 
+;    Syntax:    Delay = <minDelay> < maxDelay> 
+; 
+; Used to specify a delay (in milliseconds) to wait at the end of an each 
+; sound that is played in an event. The control PREDELAY moves the wait to 
+; the start of each sound being played. The delay is randomized between 
+; the min and max delay times. e.g.: 
+; 
+; Delay = 3000 8000     ; wait from 3 to 8 seconds between sounds 
+; Delay = 1000          ; wait exactly 1 second between sounds 
+; 
+; 
+; PRIORITY 
+; 
+;    Syntax:    Priority = <LOWEST LOW NORMAL HIGH CRITICAL> 
+; 
+; Priority and Limit are the most important attributes of them all. While 
+; possibly hundreds of audio events want to trigger every frame, only a few 
+; will be chosen. It is vitally important to ensure that important events 
+; do not get dropped. The audio engine uses the priority of the audio event 
+; when choosing which events to drop. So make priorities are set correctly 
+; for all events. 
+; 
+; 
+; TYPE 
+; 
+;    Syntax:    Type = < AMBIENT VIOLENT MOVEMENT QUIET LOUD GLOBAL SCREEN LOCAL PLAYER NORMAL GUN_SHY NOISE_SHY UNSHROUD SHROUD> 
+; 
+; Type information allows the game engine to modify event behaviour. Meaning: 
+; 
+;    ambient 
+; 
+;    violent 
+; 
+;    movement 
+; 
+;    quiet 
+; 
+;    loud 
+; 
+;    global 
+;        Positional audio event is always audible regardless of where in 
+;        the world it is. Instead of fading to silence when out of range 
+;        like normal events, global events do not fade below MINVOLUME. 
+; 
+;    screen 
+;        Audio event fades out only when it moves off the edge of the screen. 
+; 
+;    local 
+; 
+;    player 
+;        Only the owning player will be able to hear the sound. 
+; 
+;    normal 
+;        default type. 
+; 
+;    gun_shy 
+; 
+;    noise_shy 
+; 
+;    unshroud 
+;        Not audible when not covered by shroud 
+; 
+;    shroud 
+;        Not audible when shrouded 
+; 
+;         //Comments from CnC3 which also uses this audio engine. 
+;        If this flag is present, the sound 
+;        will not play if its position is inside the shroud or fog of war. 
+; 
+; 
+; FSHIFT 
+; 
+;    Syntax:    FShift = <minDelta> <maxDelta> 
+; 
+; The FShift attribute alows the playback frequency to be randomly changed 
+; in order to give some variance to repetitive sounds. The engine uses a 
+; percentage value to represent the frequency of a sound. 100 percent 
+; means normal frequency. 50 percent means half the frequency. 200 percent 
+; means twice the frequency, and so on. 
+; 
+; The minDelta and maxDelta values describe a range relative to 100 percent 
+; frequency. For example: 
+; 
+;    FShift = -5 5     ; vary frequency between (100 -5) and (100 + 5) 
+;    FShift = 5 10     ; vary frequency between 105% and 110% of original 
+;    FShift = -50 0    ; vary frequency between 50% and 100% of original 
+; 
+; 
+; VSHIFT 
+; 
+;    Syntax:    VShift = <maxDrop> 
+; 
+; Like FShift, VShift is used to randomly change the volume of a sound 
+; in order the give it more variance. The VShift value is the maximum 
+; drop in volume alowed. For example, 
+; 
+;    Volume = 80 
+;    VShift = 10     ; vary volume between 80 and 70 
+; 
+; 
+; LIMIT 
+; 
+;    Syntax:    Limit = <max instances> 
+; 
+; Limit specifies the maximum number of instances of an audio event type 
+; that can be played SIMULTANEOUSLY. Limit of one, along with IMMEDIATE 
+; control, can be used to achieve monaural sounds. 
+; 
+; 
+; RANGE 
+; 
+;    Syntax:    Range = <cells> 
+; 
+; Specifies the audible range of a sound in game cells. 
+; 
+; 
+; LOOP 
+;    Syntax:    Loop = <count> 
+; 
+; By default looping is infinite. Loop can be used to specify the 
+; exact number of loop iterations. 0 count means loop forever. 
+; 
+; 
+; MIMVOLUME 
+; 
+;    Syntax:    MinVolume = <0.100> 
+; 
+;     See "GLOBAL" TYPE above. 
+; 
+; 
+; ATTACK 
+; 
+;    Syntax:    Attack = <num> 
+; 
+; By default when the control keyword 'attack' is specified the first sound 
+; in the sound list is used as the attack sound. If the Attack attribute is 
+; supplied then the first <num> sounds in the sound list are considered 
+; attack sounds, and are randomly chosen from on playback. Obviously this 
+; is used in order to vary the attack sound. 
+; 
+;  //Comments from CnC3 which also uses this audio engine. 
+; A list of WAVE files to play when starting up the sound. This key applies ONLY to 
+; AudioEvents. If this key is not empty, one of the WAVE files listed here will be 
+; played when the sound is started up, before the sounds in the "Sounds" list. The 
+; format is exactly the same as the "Sounds" list. Note that if the sound starts 
+; when it can't actually be heard (for instance, a 3D looping sound which is out of range), 
+; the "Attack" sound will be skipped when it finally becomes audible. 
+; 
+; 
+; DECAY 
+; 
+;    Syntax:    Decay = <num> 
+; 
+; By default when the control keyword 'decay' is specified the last sound 
+; in the sound list is used as the decay sound. If the Decay attribute is 
+; supplied then the last <num> sounds in the sound list are considered 
+; decay sounds, and are randomly chosen from on playback. Obviously this 
+; is used in order to vary the decay sound. 
+; 
+;  //Comments from CnC3 which also uses this audio engine. 
+; A list of WAVE files to play when killing the sound. This key applies ONLY to 
+; AudioEvents. If this key is present and not empty, one of the WAVE files listed 
+; here will be played when the sound is killed. The format is exactly the same as 
+; the "Sounds" list. 
+; 
+; 
+
+; All sounds in the game are listed here (by name). 
