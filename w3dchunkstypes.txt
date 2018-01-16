@@ -185,6 +185,8 @@ enum ChunkType {
     W3D_CHUNK_LIGHTSCAPE                                =0x00000800,        // wrapper for lights created with Lightscape.  
         W3D_CHUNK_LIGHTSCAPE_LIGHT,                                         // definition of a light created with Lightscape.
             W3D_CHUNK_LIGHT_TRANSFORM,                                      // position and orientation (defined as right-handed 4x3 matrix transform W3dLightTransformStruct).
+    
+    W3D_CHUNK_LIGHTSCAPE_UNKNOWN1,                      =0x00000808,        // @ appears in ENB code, just know its part of Lightscape
 
     W3D_CHUNK_DAZZLE                                    =0x00000900,        // wrapper for a glare object.  Creates halos and flare lines seen around a bright light source
         W3D_CHUNK_DAZZLE_NAME,                                              // null-terminated string, name of the dazzle (typical w3d object naming: "container.object")
