@@ -200,8 +200,21 @@ enum ChunkType {
         W3D_CHUNK_SOUNDROBJ_HEADER,                                         // general information such as name and version
         W3D_CHUNK_SOUNDROBJ_DEFINITION,                                     // chunk containing the definition of the sound that is to play 
 
-    W3D_CHUNK_UNKNOWN_REN2                              =0x00000B00,        // @ appears in Renegade 2 Grizzly, Prism, Rhino, Vulture models, seems to be mesh parts
+    W3D_CHUNK_UNKNOWN1_REN2_ENB1                        =0x00000B00,        // @ appears in Renegade 2 Grizzly, Prism, Rhino, Vulture models, seems to be mesh parts and appears in ENB code
+    W3D_CHUNK_UNKNOWN1_REN2_ENB2,                                           // @ appears in ENB code
     
+    W3D_CHUNK_UNKNOWN2_REN2_ENB0,                       =0x00000B40,        // @ in ENB code
+    
+    W3D_CHUNK_UNKNOWN2_REN2_ENB3                        =0x00000B43,        // @ in ENB code
+    W3D_CHUNK_UNKNOWN2_REN2_ENB4,
+    W3D_CHUNK_UNKNOWN2_REN2_ENB5,
+    W3D_CHUNK_UNKNOWN2_REN2_ENB6,
+    W3D_CHUNK_UNKNOWN2_REN2_ENB7,
+    W3D_CHUNK_UNKNOWN2_REN2_ENB8,
+    W3D_CHUNK_UNKNOWN2_REN2_ENB9,
+    W3D_CHUNK_UNKNOWN2_REN2_ENBA,
+    W3D_CHUNK_UNKNOWN2_REN2_ENBB,
+
     W3D_CHUNK_SECONDARY_VERTICES                        =0x00000C00,        // @ called VERTICES_COPY by the community
     W3D_CHUNK_SECONDARY_VERTEX_NORMALS,                                     // @ called VERTEX_NORMALS_COPY by the community
     
