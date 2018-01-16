@@ -8,12 +8,12 @@ enum ChunkType {
         W3D_CHUNK_MESH_HEADER                           =0x00000001,        // @
         W3D_CHUNK_VERTICES                              =0x00000002,        // array of vertices (array of W3dVectorStruct's)
         W3D_CHUNK_VERTEX_NORMALS                        =0x00000003,        // array of normals (array of W3dVectorStruct's)
-        W3D_CHUNK_SURRENDER_NORMALS                     =0x00000004,        // @
-        W3D_CHUNK_TEXCOORDS                             =0x00000005,        // @
-        O_W3D_CHUNK_MATERIALS                           =0x00000006,        // @
-        O_W3D_CHUNK_TRIANGLES                           =0x00000007,        // @
+        W3D_CHUNK_SURRENDER_NORMALS                     =0x00000004,        // @ array of surrender normals (one per vertex as req. by surrender)
+        W3D_CHUNK_TEXCOORDS                             =0x00000005,        // @ array of texture coordinates
+        O_W3D_CHUNK_MATERIALS                           =0x00000006,        // @ array of materials
+        O_W3D_CHUNK_TRIANGLES                           =0x00000007,        // @ array of triangles
         O_W3D_CHUNK_QUADRANGLES                         =0x00000008,        // @
-        O_W3D_CHUNK_SURRENDER_TRIANGLES                 =0x00000009,        // @
+        O_W3D_CHUNK_SURRENDER_TRIANGLES                 =0x00000009,        // @ array of surrender format tris
         O_W3D_CHUNK_POV_TRIANGLES                       =0x0000000A,        // @
         O_W3D_CHUNK_POV_QUADRANGLES                     =0x0000000B,        // @
         W3D_CHUNK_MESH_USER_TEXT                        =0x0000000C,        // Text from the MAX comment field (Null terminated string)
@@ -78,7 +78,7 @@ enum ChunkType {
                     W3D_CHUNK_STAGE_TEXCOORDS           =0x0000004A,        // per-vertex texture coordinates (array of W3dTexCoordStruct's)
                     W3D_CHUNK_PER_FACE_TEXCOORD_IDS     =0x0000004B,        // indices to W3D_CHUNK_STAGE_TEXCOORDS, (array of Vector3i)
 
-        W3D_CHUNK_FX_SHADERS                            =0x00000050,        //@ W3D_CHUNK_Fx_SHADERS APPEARS FIRST IN BFME2 SEEMS
+        W3D_CHUNK_FX_SHADERS                            =0x00000050,        //@ W3D_CHUNK_FX_SHADERS APPEARS FIRST IN BFME2 SEEMS
             W3D_CHUNK_FX_SHADER,
             W3D_CHUNK_FX_SHADER_INFO,
             W3D_CHUNK_FX_SHADER_CONSTANT,
@@ -125,13 +125,13 @@ enum ChunkType {
         W3D_CHUNK_HMODEL_HEADER,                                            // Header for the hierarchy model
         W3D_CHUNK_NODE,                                                     // render objects connected to the hierarchy
         W3D_CHUNK_COLLISION_NODE,                                           // collision meshes connected to the hierarchy
-        W3D_CHUNK_SKIN_NODE,                                                    // skins connected to the hierarchy
+        W3D_CHUNK_SKIN_NODE,                                                // skins connected to the hierarchy
         OBSOLETE_W3D_CHUNK_HMODEL_AUX_DATA,                                 // extension of the hierarchy model header
         OBSOLETE_W3D_CHUNK_SHADOW_NODE,                                     // shadow object connected to the hierarchy
 
     W3D_CHUNK_LODMODEL                                  =0x00000400,        // blueprint for an LOD model.  This is simply a
         W3D_CHUNK_LODMODEL_HEADER,                                          // collection of 'n' render objects, ordered in terms
-        W3D_CHUNK_LOD,                                                          // of their expected rendering costs. (highest is first)
+        W3D_CHUNK_LOD,                                                      // of their expected rendering costs. (highest is first)
 
     W3D_CHUNK_COLLECTION                                =0x00000420,        // collection of render object names
         W3D_CHUNK_COLLECTION_HEADER,                                        // general info regarding the collection
