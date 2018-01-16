@@ -160,7 +160,7 @@ enum ChunkType {
         W3D_CHUNK_EMITTER_ROTATION_KEYFRAMES,                               // rotation keys for the particles
         W3D_CHUNK_EMITTER_FRAME_KEYFRAMES,                                  // frame keys (u-v based frame animation)
         W3D_CHUNK_EMITTER_BLUR_TIME_KEYFRAMES,                              // length of tail for line groups
-        W3D_CHUNK_EMITTER_UNKNOWN_CHUNK_TYPE,                               // @ ENB HAS THIS has this https://github.com/therealkyp/earth-and-beyond-server/blob/master/trunk/net7tools/chunktypes/chunktypes.cpp#l184 //0x50d is in shockfizzle03.w3d
+        W3D_CHUNK_EMITTER_UNKNOWN_CHUNK_TYPE,                               // @ ENB HAS THIS has this https://github.com/therealKyp/Earth-and-Beyond-server/blob/master/trunk/Net7Tools/ChunkTypes/ChunkTypes.cpp#L184 //0x50d is in shockfizzle03.w3d
 
     W3D_CHUNK_AGGREGATE                                 =0x00000600,        // description of an aggregate object
         W3D_CHUNK_AGGREGATE_HEADER,                                         // general information such as name and version
