@@ -102,6 +102,7 @@ enum ChunkType {
         W3D_CHUNK_HIERARCHY_HEADER,
         W3D_CHUNK_PIVOTS,
         W3D_CHUNK_PIVOT_FIXUPS,                                             // only needed by the exporter...
+        W3D_CHUNK_PIVOT_UNKNOWN1,                                           // @ appears in ENB
     
     W3D_CHUNK_ANIMATION                                 =0x00000200,        // hierarchy animation data
         W3D_CHUNK_ANIMATION_HEADER,
