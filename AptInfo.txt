@@ -422,6 +422,7 @@ enum AptMaskRenderOperation
     AptMaskRenderOperation_Add=1
 };
 
+//Initial paste, also seems to match Kanes Wrath
 enum AptVirtualFunctionTable_Indices
 {
     AptVFT_xxx=0,
