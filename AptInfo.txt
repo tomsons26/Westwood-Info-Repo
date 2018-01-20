@@ -464,7 +464,62 @@ enum AptVirtualFunctionTable_Indices
     AptVFT_CIHNone=37,
     AptVFT_NumVFTs=38
 };
-	
+
+// This is what is in BFME2
+enum AptVirtualFunctionTable_Indices
+{
+  AptVFT_xxx = 0x0,
+  AptVFT_StringValue = 0x1,
+  AptVFT_Property = 0x2,
+  AptVFT_None = 0x3,
+  AptVFT_Register = 0x4,
+  AptVFT_Boolean = 0x5,
+  AptVFT_Float = 0x6,
+  AptVFT_Integer = 0x7,
+  AptVFT_Lookup = 0x8,
+  AptVFT_NativeFunction = 0x9,
+  AptVFT_UNUSED = 0xA,
+  AptVFT_Extern = 0xB,
+  AptVFT_CharShapeInstHandle = 0xC,
+  AptVFT_CharSpriteInstHandle = 0xD,
+  AptVFT_CharButtonInstHandle = 0xE,
+  AptVFT_CharTextInstHandle = 0xF,
+  AptVFT_CharStaticTextInstHandle = 0x10,
+  AptVFT_CharMorphInstHandle = 0x11,
+  AptVFT_CharAnimationInstHandle = 0x12,
+  AptVFT_CharLevelInstHandle = 0x13,
+  AptVFT_FrameStack = 0x14,
+  AptVFT_Sound = 0x15,
+  AptVFT_Array = 0x16,
+  AptVFT_Math = 0x17,
+  AptVFT_Key = 0x18,
+  AptVFT_Global = 0x19,
+  AptVFT_ScriptColour = 0x1A,
+  AptVFT_Object = 0x1B,
+  AptVFT_Prototype = 0x1C,
+  AptVFT_Date = 0x1D,
+  AptVFT_MovieClip = 0x1E,
+  AptVFT_Mouse = 0x1F,
+  AptVFT_XmlNode = 0x20,
+  AptVFT_Xml = 0x21,
+  AptVFT_XmlAttributes = 0x22,
+  AptVFT_LoadVars = 0x23,
+  AptVFT_TextFormat = 0x24,
+  AptVFT_Extension = 0x25,
+  AptVFT_GlobalExtension = 0x26,
+  AptVFT_Stage = 0x27,
+  AptVFT_Message = 0x28,
+  AptVFT_Error = 0x29,
+  AptVFT_StringObject = 0x2A,
+  AptVFT_ScriptFunction1 = 0x2B,
+  AptVFT_ScriptFunction2 = 0x2C,
+  AptVFT_ScriptFunctionByteCodeBlock = 0x2D,
+  AptVFT_DisplayListHead = 0x2E,
+  AptVFT_CIHNone = 0x2F,
+  AptVFT_NumVFTs = 0x2F,
+};
+
+
 enum AptCmdParser::AptValueType
 {
     AptTypeInt=0,
