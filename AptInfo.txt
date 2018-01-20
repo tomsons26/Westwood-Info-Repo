@@ -516,7 +516,6 @@ enum AptVirtualFunctionTable_Indices
   AptVFT_ScriptFunction2 = 0x2C,
   AptVFT_ScriptFunctionByteCodeBlock = 0x2D,
   AptVFT_DisplayListHead = 0x2E,
-  AptVFT_CIHNone = 0x2F,
   AptVFT_NumVFTs = 0x2F,
 };
 
