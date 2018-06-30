@@ -1,4 +1,4 @@
-<details><summary>DieMuxData</summary>
+<details open><summary>DieMuxData</summary>
 
 ```
 DeathTypes
@@ -8,7 +8,7 @@ RequiredStatus
 ```
 </details>
 <ul>
-<details><summary>InstantDeathBehaviorModuleData</summary>
+<details open><summary>InstantDeathBehaviorModuleData</summary>
 
 ```
 FX
@@ -17,7 +17,7 @@ Weapon
 ```
 </details>
 
-<details><summary>SlowDeathBehaviorModuleData</summary>
+<details open><summary>SlowDeathBehaviorModuleData</summary>
 
 ```
 SinkRate
@@ -38,7 +38,7 @@ FlingPitchVariance
 ```
 </details>
 <ul>
-<details><summary>BattleBusSlowDeathBehaviorModuleData</summary>
+<details open><summary>BattleBusSlowDeathBehaviorModuleData</summary>
 
 ```
 FXStartUndeath
@@ -51,7 +51,7 @@ EmptyHulkDestructionDelay
 ```
 </details>
 
-<details><summary>JetSlowDeathBehaviorModuleData</summary>
+<details open><summary>JetSlowDeathBehaviorModuleData</summary>
 
 ```
 FXOnGroundDeath
@@ -74,7 +74,7 @@ FallHowFast
 ```
 </details>
 
-<details><summary>HelicopterSlowDeathBehaviorModuleData</summary>
+<details open><summary>HelicopterSlowDeathBehaviorModuleData</summary>
 
 ```
 SpiralOrbitTurnRate
@@ -106,7 +106,7 @@ MaxBraking
 ```
 </details>
 
-<details><summary>NeutronMissileSlowDeathBehaviorModuleData</summary>
+<details open><summary>NeutronMissileSlowDeathBehaviorModuleData</summary>
 
 ```
 ScorchMarkSize
@@ -195,7 +195,7 @@ Blast9PushForce
 ```
 </details>
 </ul>
-<details><summary>OpenContainModuleData</summary>
+<details open><summary>OpenContainModuleData</summary>
 
 ```
 ContainMax
@@ -216,7 +216,7 @@ AllowNeutralInside
 ```
 </details>
 <ul>
-<details><summary>MobNexusContainModuleData</summary>
+<details open><summary>MobNexusContainModuleData</summary>
 
 ```
 Slots
@@ -230,14 +230,14 @@ HealthRegen
 ```
 </details>
 
-<details><summary>HealContainModuleData</summary>
+<details open><summary>HealContainModuleData</summary>
 
 ```
 TimeForFullHeal
 ```
 </details>
 
-<details><summary>ParachuteContainModuleData</summary>
+<details open><summary>ParachuteContainModuleData</summary>
 
 ```
 PitchRateMax
@@ -250,7 +250,7 @@ ParachuteOpenSound
 ```
 </details>
 
-<details><summary>TransportContainModuleData</summary>
+<details open><summary>TransportContainModuleData</summary>
 
 ```
 Slots
@@ -270,7 +270,7 @@ DelayExitInAir
 ```
 </details>
 <ul>
-<details><summary>HelixContainModuleData</summary>
+<details open><summary>HelixContainModuleData</summary>
 
 ```
 PayloadTemplateName
@@ -278,14 +278,14 @@ ShouldDrawPips
 ```
 </details>
 
-<details><summary>InternetHackContainModuleData</summary>
+<details open><summary>InternetHackContainModuleData</summary>
 
 ```
 <none>
 ```
 </details>
 
-<details><summary>OverlordContainModuleData</summary>
+<details open><summary>OverlordContainModuleData</summary>
 
 ```
 PayloadTemplateName
@@ -293,7 +293,7 @@ ExperienceSinkForRider
 ```
 </details>
 
-<details><summary>RiderChangeContainModuleData</summary>
+<details open><summary>RiderChangeContainModuleData</summary>
 
 ```
 Rider1
@@ -310,14 +310,14 @@ ScuttleStatus
 </details>
 </ul>
 
-<details><summary>CaveContainModuleData</summary>
+<details open><summary>CaveContainModuleData</summary>
 
 ```
 CaveIndex
 ```
 </details>
 
-<details><summary>GarrisonContainModuleData</summary>
+<details open><summary>GarrisonContainModuleData</summary>
 
 ```
 MobileGarrison
@@ -329,7 +329,7 @@ IsEnclosingContainer
 ```
 </details>
 
-<details><summary>TunnelContainModuleData</summary>
+<details open><summary>TunnelContainModuleData</summary>
 
 ```
 TimeForFullHeal
@@ -338,7 +338,7 @@ TimeForFullHeal
 
 </ul>
 
-<details><summary>CreateObjectDieModuleData</summary>
+<details open><summary>CreateObjectDieModuleData</summary>
 
 ```
 CreationList
@@ -346,14 +346,14 @@ TransferPreviousHealth
 ```
 </details>
 
-<details><summary>DamDieModuleData</summary>
+<details open><summary>DamDieModuleData</summary>
 
 ```
 <none>
 ```
 </details>
 
-<details><summary>EjectPilotDieModuleData</summary>
+<details open><summary>EjectPilotDieModuleData</summary>
 
 ```
 AirCreationList
@@ -362,7 +362,7 @@ InvulnerableTime
 ```
 </details>
 
-<details><summary>RebuildHoleExposeDieModuleData</summary>
+<details open><summary>RebuildHoleExposeDieModuleData</summary>
 
 ```
 HoleName
@@ -371,7 +371,7 @@ TransferAttackers
 ```
 </details>
 
-<details><summary>StructureCollapseUpdateModuleData</summary>
+<details open><summary>StructureCollapseUpdateModuleData</summary>
 
 ```
 MinCollapseDelay
@@ -386,7 +386,7 @@ FXList
 ```
 </details>
 
-<details><summary>StructureToppleUpdateModuleData</summary>
+<details open><summary>StructureToppleUpdateModuleData</summary>
 
 ```
 MinToppleDelay
@@ -407,7 +407,7 @@ AngleFX
 ```
 </details>
 
-<details><summary>SpawnBehaviorModuleData</summary>
+<details open><summary>SpawnBehaviorModuleData</summary>
 
 ```
 SpawnNumber
@@ -424,14 +424,14 @@ SlavesHaveFreeWill
 ```
 </details>
 
-<details><summary>DieModuleData</summary>
+<details open><summary>DieModuleData</summary>
 
 ```
 <none>
 ```
 </details>
 
-<details><summary>FireWeaponWhenDeadBehaviorModuleData</summary>
+<details open><summary>FireWeaponWhenDeadBehaviorModuleData</summary>
 
 ```
 StartsActive
@@ -439,7 +439,7 @@ DeathWeapon
 ```
 </details>
 
-<details><summary>FXListDieModuleData</summary>
+<details open><summary>FXListDieModuleData</summary>
 
 ```
 StartsActive
@@ -448,7 +448,7 @@ OrientToObject
 ```
 </details>
 
-<details><summary>CrushDieModuleData</summary>
+<details open><summary>CrushDieModuleData</summary>
 
 ```
 TotalCrushSound
@@ -460,21 +460,21 @@ FrontEndCrushSoundPercent
 ```
 </details>
 
-<details><summary>CreateCrateDieModuleData</summary>
+<details open><summary>CreateCrateDieModuleData</summary>
 
 ```
 CrateData
 ```
 </details>
 
-<details><summary>SpecialPowerCompletionDieModuleData</summary>
+<details open><summary>SpecialPowerCompletionDieModuleData</summary>
 
 ```
 SpecialPowerTemplate
 ```
 </details>
 
-<details><summary>UpgradeDieModuleData</summary>
+<details open><summary>UpgradeDieModuleData</summary>
 
 ```
 UpgradeToRemove
