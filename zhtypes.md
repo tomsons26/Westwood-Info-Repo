@@ -529,8 +529,33 @@ SPECIAL_BATTLESHIP_BOMBARDMENT +
 ```
 </details>
 
+<details><summary>DrawModules</summary>
+
+```
+W3DDefaultDraw
+W3DDebrisDraw
+W3DModelDraw
+W3DLaserDraw
+W3DOverlordTankDraw
+W3DOverlordTruckDraw +
+W3DOverlordAircraftDraw +
+W3DProjectileStreamDraw
+W3DPoliceCarDraw
+W3DRopeDraw
+W3DScienceModelDraw
+W3DSupplyDraw
+W3DDependencyModelDraw
+W3DTankDraw
+W3DTruckDraw
+W3DTracerDraw
+W3DTankTruckDraw
+W3DTreeDraw +
+W3DPropDraw +
+```
+</details>
+
 <!---
-<details><summary<Template</summary>
+<details><summary>Template</summary>
 
 ```
 
