@@ -253,12 +253,12 @@ POISONED_GAMMA +
 
 ```
 AutoHealBehavior
-GrantStealthBehavior
-NeutronBlastBehavior
+GrantStealthBehavior +
+NeutronBlastBehavior +
 BridgeBehavior
 BridgeScaffoldBehavior
 BridgeTowerBehavior
-CountermeasuresBehavior
+CountermeasuresBehavior +
 DumbProjectileBehavior
 PhysicsBehavior
 InstantDeathBehavior
@@ -270,28 +270,28 @@ OpenContain
 OverchargeBehavior
 HealContain
 GarrisonContain
-InternetHackContain
+InternetHackContain +
 TransportContain
-RiderChangeContain
+RiderChangeContain +
 RailedTransportContain
 MobNexusContain
 TunnelContain
 OverlordContain
-HelixContain
+HelixContain +
 ParachuteContain
 PropagandaTowerBehavior
-BunkerBusterBehavior
+BunkerBusterBehavior +
 FireWeaponWhenDamagedBehavior
 FireWeaponWhenDeadBehavior
 GenerateMinefieldBehavior
 ParkingPlaceBehavior
-FlightDeckBehavior
+FlightDeckBehavior +
 PoisonedBehavior
 RebuildHoleBehavior
 SupplyWarehouseCripplingBehavior
 TechBuildingBehavior
 MinefieldBehavior
-BattleBusSlowDeathBehavior
+BattleBusSlowDeathBehavior +
 JetSlowDeathBehavior
 RailroadBehavior
 SpawnBehavior
@@ -311,8 +311,9 @@ AutoFindHealingUpdate
 BaseRegenerateUpdate
 StealthDetectorUpdate
 StealthUpdate
+//DelayedWeaponSetUpgradeUpdate -
 DeletionUpdate
-SmartBombTargetHomingUpdate
+SmartBombTargetHomingUpdate +
 DynamicShroudClearingRangeUpdate
 DeployStyleAIUpdate
 AssaultTransportAIUpdate
@@ -322,9 +323,9 @@ EnemyNearUpdate
 LifetimeUpdate
 RadiusDecalUpdate
 EMPUpdate
-LeafletDropBehavior
+LeafletDropBehavior +
 AutoDepositUpdate
-WeaponBonusUpdate
+WeaponBonusUpdate +
 MissileAIUpdate
 NeutronMissileUpdate
 FireSpreadUpdate
@@ -348,8 +349,8 @@ CommandButtonHuntUpdate
 PilotFindVehicleUpdate
 DemoTrapUpdate
 ParticleUplinkCannonUpdate
-SpectreGunshipUpdate
-SpectreGunshipDeploymentUpdate
+SpectreGunshipUpdate +
+SpectreGunshipDeploymentUpdate +
 BaikonurLaunchPower
 BattlePlanUpdate
 ProjectileStreamUpdate
@@ -378,7 +379,7 @@ StructureToppleUpdate
 StructureCollapseUpdate
 BoneFXUpdate
 RadarUpdate
-AnimationSteeringUpdate
+AnimationSteeringUpdate +
 TransportAIUpdate
 WanderAIUpdate
 WaveGuideUpdate
@@ -389,8 +390,9 @@ CostModifierUpgrade
 ActiveShroudUpgrade
 ArmorUpgrade
 CommandSetUpgrade
-GrantScienceUpgrade
-PassengersFireUpgrade
+//DelayedUpgrade -
+GrantScienceUpgrade +
+PassengersFireUpgrade +
 StatusBitsUpgrade
 SubObjectsUpgrade
 StealthUpgrade
@@ -398,15 +400,15 @@ RadarUpgrade
 PowerPlantUpgrade
 LocomotorSetUpgrade
 ObjectCreationUpgrade
-ReplaceObjectUpgrade
-ModelConditionUpgrade
+ReplaceObjectUpgrade +
+ModelConditionUpgrade +
 UnpauseSpecialPowerUpgrade
 WeaponBonusUpgrade
 WeaponSetUpgrade
 WeaponBonusUpgrade
 ExperienceScalarUpgrade
 MaxHealthUpgrade
-LockWeaponCreate
+LockWeaponCreate +
 PreorderCreate
 SupplyCenterCreate
 SupplyWarehouseCreate
@@ -424,14 +426,14 @@ UnitCrateCollide
 VeterancyCrateCollide
 ConvertToCarBombCrateCollide
 ConvertToHijackedVehicleCrateCollide
-SabotageCommandCenterCrateCollide
-SabotageFakeBuildingCrateCollide
-SabotageInternetCenterCrateCollide
-SabotageMilitaryFactoryCrateCollide
-SabotagePowerPlantCrateCollide
-SabotageSuperweaponCrateCollide
-SabotageSupplyCenterCrateCollide
-SabotageSupplyDropzoneCrateCollide
+SabotageCommandCenterCrateCollide +
+SabotageFakeBuildingCrateCollide +
+SabotageInternetCenterCrateCollide +
+SabotageMilitaryFactoryCrateCollide +
+SabotagePowerPlantCrateCollide +
+SabotageSuperweaponCrateCollide +
+SabotageSupplyCenterCrateCollide +
+SabotageSupplyDropzoneCrateCollide +
 SalvageCrateCollide
 InactiveBody
 ActiveBody
@@ -439,11 +441,11 @@ HighlanderBody
 ImmortalBody
 StructureBody
 HiveStructureBody
-UndeadBody
+UndeadBody +
 CashHackSpecialPower
 DefectorSpecialPower
 OCLSpecialPower
-FireWeaponPower
+FireWeaponPower +
 SpecialAbility
 SpyVisionSpecialPower
 CashBountyPower
