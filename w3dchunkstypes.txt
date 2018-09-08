@@ -201,7 +201,7 @@ enum ChunkType {
         W3D_CHUNK_SOUNDROBJ_DEFINITION,                                     // chunk containing the definition of the sound that is to play 
 
     W3D_CHUNK_SHDMESH                                   =0x00000B00,        // @ ShdMeshClass, appears in Renegade 2 Grizzly, Prism, Rhino, Vulture models, seems to be mesh parts and appears in ENB code
-        W3D_CHUNK_SHDMESH_HEADER,                                           // @ appears in ENB code
+        W3D_CHUNK_SHDMESH_NAME,                                             // @ appears in ENB code, appears to only contain name
         W3D_CHUNK_SHDMESH_UNKNOWN,
         W3D_CHUNK_SHDMESH_SOMESTRING,
     
