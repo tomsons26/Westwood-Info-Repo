@@ -208,7 +208,7 @@ enum ChunkType {
     W3D_CHUNK_B20                                       =0x00000B20,        // @ BFME1/2 gbmtwalld has this
         W3D_CHUNK_B21,
     
-    W3D_CHUNK_SHDSUBMESH,                               =0x00000B40,        // @ ShdSubMeshClass in ENB code
+    W3D_CHUNK_SHDSUBMESH                                =0x00000B40,        // @ ShdSubMeshClass in ENB code
         W3D_CHUNK_SHDSUBMESH_41,                                            // @ no code that reads it found so far
         W3D_CHUNK_SHDSUBMESH_42,                                            // @ no code that reads it found so far
         W3D_CHUNK_SHDSUBMESH_VERTICES,                                      // @ read by ShdSubMeshClass::read_vertices
