@@ -215,6 +215,7 @@ enum ChunkType {
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_S,                               // @ read by ShdSubMeshClass::read_tangent_basis_s
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_T,                               // @ read by ShdSubMeshClass::read_tangent_basis_t
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_SXT,                             // @ read by ShdSubMeshClass::read_tangent_basis_sxt
+        W3D_CHUNK_SHDSUBMESH_B4C                                            // @
         W3D_CHUNK_SHDSUBMESH_VERTEX_INFLUENCES,                             // @
 
     W3D_CHUNK_SECONDARY_VERTICES                        =0x00000C00,        // @ called VERTICES_COPY by the community
