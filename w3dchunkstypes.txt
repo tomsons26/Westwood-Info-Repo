@@ -71,7 +71,7 @@ enum ChunkType {
                 W3D_CHUNK_DCG                           =0x0000003B,        // per-vertex diffuse color values (array of W3dRGBAStruct's)
                 W3D_CHUNK_DIG                           =0x0000003C,        // per-vertex diffuse illumination values (array of W3dRGBStruct's)
                 W3D_CHUNK_SCG                           =0x0000003E,        // per-vertex specular color values (array of W3dRGBStruct's)
-                W3D_CHUNK_NCG                           =0x0000003F,        // @ per-vertex normal color? values (array of W3dRGBStruct's?)// Name guessed, guess made by logical order, BFME2 W3Ds seem to confirm Normal Map related
+                W3D_CHUNK_NRG                           =0x0000003F,        // @ per-vertex normal color? values (array of W3dRGBStruct's?)// Name guessed, guess made by logical order, BFME2 W3Ds seem to confirm Normal Map related
 
                 W3D_CHUNK_TEXTURE_STAGE                 =0x00000048,        // wrapper around a texture stage.
                     W3D_CHUNK_TEXTURE_IDS               =0x00000049,        // single or per-tri array of uint32 texture indices (check chunk size)
@@ -186,11 +186,6 @@ enum ChunkType {
     W3D_CHUNK_LIGHTSCAPE                                =0x00000800,        // wrapper for lights created with Lightscape.  
         W3D_CHUNK_LIGHTSCAPE_LIGHT,                                         // definition of a light created with Lightscape.
             W3D_CHUNK_LIGHT_TRANSFORM,                                      // position and orientation (defined as right-handed 4x3 matrix transform W3dLightTransformStruct).
-    
-    W3D_CHUNK_LIGHTSCAPE_UNKNOWN1                       =0x00000808,        // @ appears in ENB code, just know its part of Lightscape
-
-    W3D_CHUNK_LIGHTSCAPE_UNKNOWN2                       =0x00000810,
-    W3D_CHUNK_LIGHTSCAPE_UNKNOWN3,
 
     W3D_CHUNK_DAZZLE                                    =0x00000900,        // wrapper for a glare object.  Creates halos and flare lines seen around a bright light source
         W3D_CHUNK_DAZZLE_NAME,                                              // null-terminated string, name of the dazzle (typical w3d object naming: "container.object")
@@ -202,15 +197,15 @@ enum ChunkType {
 
     W3D_CHUNK_SHDMESH                                   =0x00000B00,        // @ ShdMeshClass, appears in Renegade 2 Grizzly, Prism, Rhino, Vulture models, seems to be mesh parts and appears in ENB code
         W3D_CHUNK_SHDMESH_NAME,                                             // @ appears in ENB code, appears to only contain name
-        W3D_CHUNK_SHDMESH_UNKNOWN,
-        W3D_CHUNK_SHDMESH_SOMESTRING,
+        W3D_CHUNK_SHDMESH_HEADER,
+        W3D_CHUNK_SHDMESH_STRUCT2,
     
-    W3D_CHUNK_B20                                       =0x00000B20,        // @ BFME1/2 gbmtwalld has this
-        W3D_CHUNK_B21,
+    W3D_CHUNK_SHDSUBMESH                               =0x00000B20,        // @ BFME1/2 gbmtwalld has this
+        W3D_CHUNK_SHDSUBMESH_HEADER,
     
-    W3D_CHUNK_SHDSUBMESH                                =0x00000B40,        // @ ShdSubMeshClass in ENB code
-        W3D_CHUNK_SHDSUBMESH_41,                                            // @ no code that reads it found so far
-        W3D_CHUNK_SHDSUBMESH_42,                                            // @ no code that reads it found so far
+        W3D_CHUNK_SHDSUBMESH_SHADER                         =0x00000B40,    // @ ShdSubMeshClass in ENB code
+        W3D_CHUNK_SHDSUBMESH_SHADER_TYPE,                                   // @ no code that reads it found so far
+        W3D_CHUNK_SHDSUBMESH_SHADER_DATA,                                   // @ no code that reads it found so far
         W3D_CHUNK_SHDSUBMESH_VERTICES,                                      // @ read by ShdSubMeshClass::read_vertices
         W3D_CHUNK_SHDSUBMESH_VERTEX_NORMALS,                                // @ read by ShdSubMeshClass::read_vertex_normals
         W3D_CHUNK_SHDSUBMESH_TRIANGLES,                                     // @ read by ShdSubMeshClass::read_triangles
