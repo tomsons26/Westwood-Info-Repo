@@ -204,8 +204,8 @@ enum ChunkType {
         W3D_CHUNK_SHDSUBMESH_HEADER,
     
         W3D_CHUNK_SHDSUBMESH_SHADER                         =0x00000B40,    // @ ShdSubMeshClass in ENB code
-        W3D_CHUNK_SHDSUBMESH_SHADER_TYPE,                                   // @ no code that reads it found so far
-        W3D_CHUNK_SHDSUBMESH_SHADER_DATA,                                   // @ no code that reads it found so far
+        W3D_CHUNK_SHDSUBMESH_SHADER_TYPE,                                   // @ read at 00B7B6B0 in ZH WB
+        W3D_CHUNK_SHDSUBMESH_SHADER_DATA,                                   // @ read at 00B7B6B0 in ZH WB
         W3D_CHUNK_SHDSUBMESH_VERTICES,                                      // @ read by ShdSubMeshClass::read_vertices
         W3D_CHUNK_SHDSUBMESH_VERTEX_NORMALS,                                // @ read by ShdSubMeshClass::read_vertex_normals
         W3D_CHUNK_SHDSUBMESH_TRIANGLES,                                     // @ read by ShdSubMeshClass::read_triangles
