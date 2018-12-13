@@ -32,7 +32,7 @@ enum ChunkType {
             W3D_CHUNK_MATERIAL3,
             W3D_CHUNK_MATERIAL3_NAME,
             W3D_CHUNK_MATERIAL3_INFO,
-            W3D_CHUNK_MATERIAL3_DC_MAP,                 =0x00000019,        // @
+            W3D_CHUNK_MATERIAL3_DC_MAP,                                     // @
                 W3D_CHUNK_MAP3_FILENAME,
                 W3D_CHUNK_MAP3_INFO,
             W3D_CHUNK_MATERIAL3_DI_MAP,
@@ -203,7 +203,7 @@ enum ChunkType {
     W3D_CHUNK_SHDSUBMESH                               =0x00000B20,         // @ BFME1/2 gbmtwalld has this
         W3D_CHUNK_SHDSUBMESH_HEADER,
     
-        W3D_CHUNK_SHDSUBMESH_SHADER                         =0x00000B40,    // @ ShdSubMeshClass in ENB code
+        W3D_CHUNK_SHDSUBMESH_SHADER                    =0x00000B40,         // @ ShdSubMeshClass in ENB code
         W3D_CHUNK_SHDSUBMESH_SHADER_TYPE,                                   // @ read at 00B7B6B0 in ZH WB
         W3D_CHUNK_SHDSUBMESH_SHADER_DATA,                                   // @ read at 00B7B6B0 in ZH WB
         W3D_CHUNK_SHDSUBMESH_VERTICES,                                      // @ read by ShdSubMeshClass::read_vertices
@@ -215,7 +215,7 @@ enum ChunkType {
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_S,                               // @ read by ShdSubMeshClass::read_tangent_basis_s
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_T,                               // @ read by ShdSubMeshClass::read_tangent_basis_t
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_SXT,                             // @ read by ShdSubMeshClass::read_tangent_basis_sxt
-        W3D_CHUNK_SHDSUBMESH_B4C                                            // @
+        W3D_CHUNK_SHDSUBMESH_B4C,                                           // @
         W3D_CHUNK_SHDSUBMESH_VERTEX_INFLUENCES,                             // @
 
     W3D_CHUNK_SECONDARY_VERTICES                        =0x00000C00,        // @ called VERTICES_COPY by the community
