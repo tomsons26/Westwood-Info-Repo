@@ -198,7 +198,7 @@ enum ChunkType {
     W3D_CHUNK_SHDMESH                                   =0x00000B00,        // @ ShdMeshClass, appears in Renegade 2 Grizzly, Prism, Rhino, Vulture models, seems to be mesh parts and appears in ENB code
         W3D_CHUNK_SHDMESH_NAME,                                             // @ appears in ENB code, appears to only contain name
         W3D_CHUNK_SHDMESH_HEADER,
-        W3D_CHUNK_SHDMESH_STRUCT2,
+        W3D_CHUNK_SHDMESH_STRUCT2,                                          // @ read at 00A0A56A in ENB
     
     W3D_CHUNK_SHDSUBMESH                               =0x00000B20,        // @ BFME1/2 gbmtwalld has this
         W3D_CHUNK_SHDSUBMESH_HEADER,
