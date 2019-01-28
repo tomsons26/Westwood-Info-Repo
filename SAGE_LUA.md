@@ -98,6 +98,41 @@ random
 randomseed
 ```
 
+event
+
+```
+gettable
+settable
+index
+getglobal
+setglobal
+add
+sub
+mul
+div
+pow
+unm
+lt
+concat
+gc
+function
+le
+gt
+ge
+```
+
+iolibtag
+```
+appendto
+closefile
+flush
+openfile
+read
+readfrom
+seek
+write
+writeto
+```
 
 Game Functions
 
