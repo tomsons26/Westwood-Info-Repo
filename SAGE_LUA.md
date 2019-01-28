@@ -149,6 +149,21 @@ strfind
 gsub
 ```
 
+iolib
+```
+_ERRORMESSAGE
+clock
+date
+debug
+execute
+exit
+getenv
+remove
+rename
+setlocale
+tmpname
+```
+
 Game Functions
 
 ----
