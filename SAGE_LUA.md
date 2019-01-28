@@ -75,7 +75,7 @@ randomseed
 Game Functions
 
 ----
-InternalEvents
+Internal Events
 ```
 OnDamaged
 OnDestroyed
@@ -94,4 +94,29 @@ OnBuildingComplete
 OnSlaughtered
 OnGenericEvent
 OnBuildVariation
+```
+
+Functions For Object Definitons
+```
+_ALERT
+GetFrame
+CurDrawableModelcondition
+CurDrawableObjectStatus
+CurDrawableShowSubObject
+CurDrawableHideSubObject
+CurDrawableShowSubObjectPermanently
+CurDrawableHideSubObjectPermanently
+CurDrawableHideModule
+CurDrawableShowModule
+CurDrawablePrevAnimationState
+CurDrawablePrevAnimation
+CurDrawableGetCurrentTargetDistance
+CurDrawableGetCurrentTargetHeight
+CurDrawableGetCurrentTargetBearing
+CurDrawablePrevAnimFraction
+CurDrawableSetTransitionAnimState
+CurDrawableAllowToContinue
+CurDrawablePlaySound
+CurDrawableIsCurrentTargetKindof
+GetClientRandomNumberReal
 ```
