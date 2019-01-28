@@ -134,6 +134,21 @@ write
 writeto
 ```
 
+strlib
+```
+strlen
+strsub
+strlower
+strupper
+strchar
+strrep
+ascii
+strbyte
+format
+strfind
+gsub
+```
+
 Game Functions
 
 ----
