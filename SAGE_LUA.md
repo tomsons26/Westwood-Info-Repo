@@ -1,6 +1,7 @@
 Current doc is using info from BFME2 only.  
 
-Standard LUA functions available:
+Standard LUA functions available:  
+
 ----
 mathlib
 ```
@@ -28,7 +29,6 @@ rad
 random
 randomseed
 ```
-
 ----
 InternalEvents
 ```
