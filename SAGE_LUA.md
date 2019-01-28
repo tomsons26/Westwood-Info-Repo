@@ -29,8 +29,10 @@ rawsettable
 setglobal
 settag
 settagmethod
+tag
 tonumber
 tostring
+type
 assert
 getn
 sort
