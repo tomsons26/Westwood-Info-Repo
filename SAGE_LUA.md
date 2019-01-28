@@ -166,6 +166,15 @@ setlocale
 tmpname
 ```
 
+dblib
+```
+getlocal
+getinfo
+setcallhook
+setlinehook
+setlocal
+```
+
 deprecated
 ```
 foreachvar
