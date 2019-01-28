@@ -175,7 +175,7 @@ setlinehook
 setlocal
 ```
 
-deprecated
+deprecated - unusable, code to handle them is removed in EA's fork
 ```
 foreachvar
 nextvar
