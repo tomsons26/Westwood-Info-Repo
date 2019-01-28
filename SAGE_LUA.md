@@ -1,6 +1,6 @@
 Current doc is using info from BFME2 only.  
-<details><summary>InternalEvents</summary>
 
+InternalEvents
 ```
 OnDamaged
 OnDestroyed
@@ -20,4 +20,3 @@ OnSlaughtered
 OnGenericEvent
 OnBuildVariation
 ```
-</details>
