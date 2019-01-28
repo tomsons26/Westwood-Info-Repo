@@ -164,6 +164,14 @@ setlocale
 tmpname
 ```
 
+deprecated
+```
+foreachvar
+nextvar
+rawgetglobal
+rawsetglobal
+```
+
 Game Functions
 
 ----
