@@ -1,7 +1,7 @@
 Current doc is using info from BFME2 only.  
 
 Standard LUA functions available:
-
+--
 mathlib
 ```
 abs
@@ -29,7 +29,7 @@ random
 randomseed
 ```
 
---------------
+--
 InternalEvents
 ```
 OnDamaged
