@@ -1,5 +1,35 @@
 Current doc is using info from BFME2 only.  
 
+Standard LUA functions available:
+
+mathlib
+```
+abs
+sin
+cos
+tan
+asin
+acos
+atan
+atan2
+ceil
+floor
+mod
+frexp
+ldexp
+sqrt
+min
+max
+log
+log10
+exp
+deg
+rad
+random
+randomseed
+```
+
+
 InternalEvents
 ```
 OnDamaged
