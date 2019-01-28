@@ -183,6 +183,27 @@ rawgetglobal
 rawsetglobal
 ```
 
+typenames
+```
+userdata
+nil
+number
+string
+table
+function
+```
+
+catnames
+```
+all
+collate
+ctype
+monetary
+numeric
+time
+```
+
+
 Game Functions
 
 ----
