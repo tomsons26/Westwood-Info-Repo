@@ -71,7 +71,7 @@ enum ChunkType {
                 W3D_CHUNK_DCG                           =0x0000003B,        // per-vertex diffuse color values (array of W3dRGBAStruct's)
                 W3D_CHUNK_DIG                           =0x0000003C,        // per-vertex diffuse illumination values (array of W3dRGBStruct's)
                 W3D_CHUNK_SCG                           =0x0000003E,        // per-vertex specular color values (array of W3dRGBStruct's)
-                W3D_CHUNK_NRG                           =0x0000003F,        // @ per-vertex normal color? values (array of W3dRGBStruct's?)// Name guessed, guess made by logical order, BFME2 W3Ds seem to confirm Normal Map related
+                W3D_CHUNK_FXSHADER_IDS                  =0x0000003F,        // @ single or per-tri array of uint32 FXShader indices (check chunk size)
 
                 W3D_CHUNK_TEXTURE_STAGE                 =0x00000048,        // wrapper around a texture stage.
                     W3D_CHUNK_TEXTURE_IDS               =0x00000049,        // single or per-tri array of uint32 texture indices (check chunk size)
@@ -200,12 +200,12 @@ enum ChunkType {
         W3D_CHUNK_SHDMESH_HEADER,
         W3D_CHUNK_SHDMESH_USER_TEXT,                                        // @ Contains UserText strings, read at 00A0A56A in ENB
     
-    W3D_CHUNK_SHDSUBMESH                               =0x00000B20,         // @ BFME1/2 gbmtwalld has this
-        W3D_CHUNK_SHDSUBMESH_HEADER,
+    W3D_CHUNK_SHDSUBMESH                               =0x00000B20,         // @ read by ShdSubMeshClass::Load_W3D, BFME1/2 gbmtwalld has this
+        W3D_CHUNK_SHDSUBMESH_HEADER,                                        // @ read by ShdSubMeshClass::Load_W3D
     
         W3D_CHUNK_SHDSUBMESH_SHADER                    =0x00000B40,         // @ ShdSubMeshClass in ENB code
         W3D_CHUNK_SHDSUBMESH_SHADER_TYPE,                                   // @ read at 00B7B6B0 in ZH WB
-        W3D_CHUNK_SHDSUBMESH_SHADER_DATA,                                   // @ read at 00B7B6B0 in ZH WB
+        W3D_CHUNK_SHDSUBMESH_SHADER_DATA,                                   // @ read by 00B7B6B0 in ZH WB
         W3D_CHUNK_SHDSUBMESH_VERTICES,                                      // @ read by ShdSubMeshClass::read_vertices
         W3D_CHUNK_SHDSUBMESH_VERTEX_NORMALS,                                // @ read by ShdSubMeshClass::read_vertex_normals
         W3D_CHUNK_SHDSUBMESH_TRIANGLES,                                     // @ read by ShdSubMeshClass::read_triangles
