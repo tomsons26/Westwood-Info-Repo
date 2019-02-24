@@ -1,4 +1,4 @@
-"+" Added in ROTWK
+"+" Added in ROTWK  
 "-" Removed from ROTWK
 
 <details><summary>KindOfType</summary>
