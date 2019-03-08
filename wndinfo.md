@@ -1,0 +1,218 @@
+```
+const char *_WindowStatusNames[26] =
+{
+  "ACTIVE",
+  "TOGGLE",
+  "DRAGABLE",
+  "ENABLED",
+  "HIDDEN",
+  "ABOVE",
+  "BELOW",
+  "IMAGE",
+  "TABSTOP",
+  "NOINPUT",
+  "NOFOCUS",
+  "DESTROYED",
+  "BORDER",
+  "SMOOTH_TEXT",
+  "ONE_LINE",
+  "NO_FLUSH",
+  "SEE_THRU",
+  "RIGHT_CLICK",
+  "WRAP_CENTERED",
+  "CHECK_LIKE",
+  "HOTKEY_TEXT",
+  "USE_OVERLAY_STATES",
+  "NOT_READY",
+  "FLASHING",
+  "ALWAYS_COLOR",
+  "ON_MOUSE_DOWN"
+};
+
+const char *_WindowStyleNames[16] =
+{
+  "PUSHBUTTON",
+  "RADIOBUTTON",
+  "CHECKBOX",
+  "VERTSLIDER",
+  "HORZSLIDER",
+  "SCROLLLISTBOX",
+  "ENTRYFIELD",
+  "STATICTEXT",
+  "PROGRESSBAR",
+  "USER",
+  "MOUSETRACK",
+  "ANIMATED",
+  "TABSTOP",
+  "TABCONTROL",
+  "TABPANE",
+  "COMBOBOX"
+};
+```
+```
+Callbacks, FunctionLexicon parses handles resolving these
+
+_gameWinDrawTable
+    IMECandidateMainDraw
+    IMECandidateTextAreaDraw
+    
+_gameWinSystemTable
+    PassSelectedButtonsToParentSystem
+    PassMessagesToParentSystem
+    GameWinDefaultSystem
+    GadgetPushButtonSystem
+    GadgetCheckBoxSystem
+    GadgetRadioButtonSystem
+    GadgetTabControlSystem
+    GadgetListBoxSystem
+    GadgetComboBoxSystem
+    GadgetHorizontalSliderSystem
+    GadgetVerticalSliderSystem
+    GadgetProgressBarSystem
+    GadgetStaticTextSystem
+    GadgetTextEntrySystem
+    MessageBoxSystem
+    QuitMessageBoxSystem
+    ExtendedMessageBoxSystem
+    MOTDSystem
+    MainMenuSystem
+    OptionsMenuSystem
+    SinglePlayerMenuSystem
+    QuitMenuSystem
+    MapSelectMenuSystem
+    ReplayMenuSystem
+    CreditsMenuSystem
+    LanLobbyMenuSystem
+    LanGameOptionsMenuSystem
+    LanMapSelectMenuSystem
+    SkirmishGameOptionsMenuSystem
+    SkirmishMapSelectMenuSystem
+    ChallengeMenuSystem
+    SaveLoadMenuSystem
+    PopupCommunicatorSystem
+    PopupReplaySystem
+    KeyboardOptionsMenuSystem
+    NetworkDirectConnectSystem
+    InGamePopupMessageSystem
+    ControlBarSystem
+    ControlBarObserverSystem
+    IMECandidateWindowSystem
+    ReplayControlSystem
+    InGameChatSystem
+    DisconnectControlSystem
+    DiplomacySystem
+    GeneralsExpPointsSystem
+    DifficultySelectSystem
+    IdleWorkerSystem
+    GameInfoWindowSystem
+    ScoreScreenSystem
+    
+_gameWinInputTable
+    GameWinDefaultInput
+    GameWinBlockInput
+    GadgetPushButtonInput
+    GadgetCheckBoxInput
+    GadgetRadioButtonInput
+    GadgetTabControlInput
+    GadgetListBoxInput
+    GadgetListBoxMultiInput
+    GadgetComboBoxInput
+    GadgetHorizontalSliderInput
+    GadgetVerticalSliderInput
+    GadgetStaticTextInput
+    GadgetTextEntryInput
+    MainMenuInput
+    MapSelectMenuInput
+    OptionsMenuInput
+    SinglePlayerMenuInput
+    LanLobbyMenuInput
+    ReplayMenuInput
+    CreditsMenuInput
+    KeyboardOptionsMenuInput
+    PopupCommunicatorInput
+    LanGameOptionsMenuInput
+    LanMapSelectMenuInput
+    SkirmishGameOptionsMenuInput
+    SkirmishMapSelectMenuInput
+    ChallengeMenuInput
+    NetworkDirectConnectInput
+    InGamePopupMessageInput
+    ControlBarInput
+    ReplayControlInput
+    InGameChatInput
+    DisconnectControlInput
+    DiplomacyInput
+    LeftHUDInput
+    ScoreScreenInput
+    SaveLoadMenuInput
+    BeaconWindowInput
+    DifficultySelectInput
+    PopupReplayInput
+    GeneralsExpPointsInput
+    IMECandidateWindowInput
+    
+_gameWinTooltipTable
+    GameWinDefaultTooltip
+    
+_winLayoutInitTable
+    MainMenuInit
+    OptionsMenuInit
+    SaveLoadMenuInit
+    SaveLoadMenuFullScreenInit
+    PopupCommunicatorInit
+    KeyboardOptionsMenuInit
+    SinglePlayerMenuInit
+    MapSelectMenuInit
+    LanLobbyMenuInit
+    ReplayMenuInit
+    CreditsMenuInit
+    LanGameOptionsMenuInit
+    LanMapSelectMenuInit
+    SkirmishGameOptionsMenuInit
+    SkirmishMapSelectMenuInit
+    ChallengeMenuInit
+    NetworkDirectConnectInit
+    InGamePopupMessageInit
+    GameInfoWindowInit
+    ScoreScreenInit
+    DifficultySelectInit
+    PopupReplayInit
+    
+winLayoutUpdateTable
+    MainMenuUpdate
+    OptionsMenuUpdate
+    SinglePlayerMenuUpdate
+    MapSelectMenuUpdate
+    LanLobbyMenuUpdate
+    ReplayMenuUpdate
+    SaveLoadMenuUpdate
+    CreditsMenuUpdate
+    LanGameOptionsMenuUpdate
+    LanMapSelectMenuUpdate
+    SkirmishGameOptionsMenuUpdate
+    SkirmishMapSelectMenuUpdate
+    ChallengeMenuUpdate
+    NetworkDirectConnectUpdate
+    ScoreScreenUpdate
+    PopupReplayUpdate
+
+winLayoutShutdownTable
+    MainMenuShutdown
+    OptionsMenuShutdown
+    SaveLoadMenuShutdown
+    PopupCommunicatorShutdown
+    KeyboardOptionsMenuShutdown
+    SinglePlayerMenuShutdown
+    MapSelectMenuShutdown
+    LanLobbyMenuShutdown
+    ReplayMenuShutdown
+    CreditsMenuShutdown
+    LanGameOptionsMenuShutdown
+    LanMapSelectMenuShutdown
+    SkirmishGameOptionsMenuShutdown
+    SkirmishMapSelectMenuShutdown
+    ChallengeMenuShutdown
+    NetworkDirectConnectShutdown
+    ScoreScreenShutdown
+    PopupReplayShutdown
+```
