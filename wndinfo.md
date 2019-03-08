@@ -215,4 +215,103 @@ winLayoutShutdownTable
     NetworkDirectConnectShutdown
     ScoreScreenShutdown
     PopupReplayShutdown
+   
+
+//w3d's
+_gameWinDrawTable_0
+    GameWinDefaultDraw
+    W3DGameWinDefaultDraw
+    W3DGadgetPushButtonDraw
+    W3DGadgetPushButtonImageDraw
+    W3DGadgetCheckBoxDraw
+    W3DGadgetCheckBoxImageDraw
+    W3DGadgetRadioButtonDraw
+    W3DGadgetRadioButtonImageDraw
+    W3DGadgetTabControlDraw
+    W3DGadgetTabControlImageDraw
+    W3DGadgetListBoxDraw
+    W3DGadgetListBoxImageDraw
+    W3DGadgetComboBoxDraw
+    W3DGadgetComboBoxImageDraw
+    W3DGadgetHorizontalSliderDraw
+    W3DGadgetHorizontalSliderImageDraw
+    W3DGadgetVerticalSliderDraw
+    W3DGadgetVerticalSliderImageDraw
+    W3DGadgetProgressBarDraw
+    W3DGadgetProgressBarImageDraw
+    W3DGadgetStaticTextDraw
+    W3DGadgetStaticTextImageDraw
+    W3DGadgetTextEntryDraw
+    W3DGadgetTextEntryImageDraw
+    W3DLeftHUDDraw
+    W3DCameoMovieDraw
+    W3DRightHUDDraw
+    W3DPowerDraw
+    W3DMainMenuDraw
+    W3DMainMenuFourDraw
+    W3DMetalBarMenuDraw
+    W3DCreditsMenuDraw
+    W3DClockDraw
+    W3DMainMenuMapBorder
+    W3DMainMenuButtonDropShadowDraw
+    W3DMainMenuRandomTextDraw
+    W3DThinBorderDraw
+    W3DShellMenuSchemeDraw
+    W3DCommandBarBackgroundDraw
+    W3DCommandBarTopDraw
+    W3DCommandBarGenExpDraw
+    W3DCommandBarHelpPopupDraw
+    W3DCommandBarGridDraw
+    W3DCommandBarForegroundDraw
+    W3DNoDraw
+    W3DDrawMapPreview
+    
+_gameWinDrawTable_0
+    GameWinDefaultDraw
+    W3DGameWinDefaultDraw
+    W3DGadgetPushButtonDraw
+    W3DGadgetPushButtonImageDraw
+    W3DGadgetCheckBoxDraw
+    W3DGadgetCheckBoxImageDraw
+    W3DGadgetRadioButtonDraw
+    W3DGadgetRadioButtonImageDraw
+    W3DGadgetTabControlDraw
+    W3DGadgetTabControlImageDraw
+    W3DGadgetListBoxDraw
+    W3DGadgetListBoxImageDraw
+    W3DGadgetComboBoxDraw
+    W3DGadgetComboBoxImageDraw
+    W3DGadgetHorizontalSliderDraw
+    W3DGadgetHorizontalSliderImageDraw
+    W3DGadgetVerticalSliderDraw
+    W3DGadgetVerticalSliderImageDraw
+    W3DGadgetProgressBarDraw
+    W3DGadgetProgressBarImageDraw
+    W3DGadgetStaticTextDraw
+    W3DGadgetStaticTextImageDraw
+    W3DGadgetTextEntryDraw
+    W3DGadgetTextEntryImageDraw
+    W3DLeftHUDDraw
+    W3DCameoMovieDraw
+    W3DRightHUDDraw
+    W3DPowerDraw
+    W3DMainMenuDraw
+    W3DMainMenuFourDraw
+    W3DMetalBarMenuDraw
+    W3DCreditsMenuDraw
+    W3DClockDraw
+    W3DMainMenuMapBorder
+    W3DMainMenuButtonDropShadowDraw
+    W3DMainMenuRandomTextDraw
+    W3DThinBorderDraw
+    W3DShellMenuSchemeDraw
+    W3DCommandBarBackgroundDraw
+    W3DCommandBarTopDraw
+    W3DCommandBarGenExpDraw
+    W3DCommandBarHelpPopupDraw
+    W3DCommandBarGridDraw
+    W3DCommandBarForegroundDraw
+    W3DNoDraw
+    W3DDrawMapPreview   
+
 ```
