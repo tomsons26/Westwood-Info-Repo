@@ -5,43 +5,43 @@ These are all the chunk ID's i have been able to find so far including legacy th
 enum ChunkType {
 
     W3D_CHUNK_MESH                                      =0x00000000,        // Mesh definition
-        W3D_CHUNK_MESH_HEADER                           =0x00000001,        // @
+        W3D_CHUNK_MESH_HEADER                           =0x00000001,        // @ obsolete
         W3D_CHUNK_VERTICES                              =0x00000002,        // array of vertices (array of W3dVectorStruct's)
         W3D_CHUNK_VERTEX_NORMALS                        =0x00000003,        // array of normals (array of W3dVectorStruct's)
-        W3D_CHUNK_SURRENDER_NORMALS                     =0x00000004,        // @ array of surrender normals (one per vertex as req. by surrender)
-        W3D_CHUNK_TEXCOORDS                             =0x00000005,        // @ array of texture coordinates
-        O_W3D_CHUNK_MATERIALS                           =0x00000006,        // @ array of materials
-        O_W3D_CHUNK_TRIANGLES                           =0x00000007,        // @ array of triangles
-        O_W3D_CHUNK_QUADRANGLES                         =0x00000008,        // @ array of surrender format quads
-        O_W3D_CHUNK_SURRENDER_TRIANGLES                 =0x00000009,        // @ array of surrender format tris
-        O_W3D_CHUNK_POV_TRIANGLES                       =0x0000000A,        // @
-        O_W3D_CHUNK_POV_QUADRANGLES                     =0x0000000B,        // @
+        W3D_CHUNK_SURRENDER_NORMALS                     =0x00000004,        // @ obsolete, array of surrender normals (one per vertex as req. by surrender)
+        W3D_CHUNK_TEXCOORDS                             =0x00000005,        // @ obsolete, array of texture coordinates
+        O_W3D_CHUNK_MATERIALS                           =0x00000006,        // @ obsolete, array of materials
+        O_W3D_CHUNK_TRIANGLES                           =0x00000007,        // @ obsolete, array of triangles
+        O_W3D_CHUNK_QUADRANGLES                         =0x00000008,        // @ obsolete, array of surrender format quads
+        O_W3D_CHUNK_SURRENDER_TRIANGLES                 =0x00000009,        // @ obsolete, array of surrender format tris
+        O_W3D_CHUNK_POV_TRIANGLES                       =0x0000000A,        // @ obsolete, ?
+        O_W3D_CHUNK_POV_QUADRANGLES                     =0x0000000B,        // @ obsolete, ?
         W3D_CHUNK_MESH_USER_TEXT                        =0x0000000C,        // Text from the MAX comment field (Null terminated string)
-        W3D_CHUNK_VERTEX_COLORS                         =0x0000000D,        // @
+        W3D_CHUNK_VERTEX_COLORS                         =0x0000000D,        // @ obsolete, ?
         W3D_CHUNK_VERTEX_INFLUENCES                     =0x0000000E,        // Mesh Deformation vertex connections (array of W3dVertInfStruct's)
         
-        W3D_CHUNK_DAMAGE                                =0x0000000F,        // @ This chunk is used extensively in Earth & Beyond
-            W3D_CHUNK_DAMAGE_HEADER,
-            W3D_CHUNK_DAMAGE_VERTICES,
-            W3D_CHUNK_DAMAGE_COLORS,
-            W3D_CHUNK_DAMAGE_MATERIALS,
+        W3D_CHUNK_DAMAGE                                =0x0000000F,        // @ obsolete, ?, this chunk is used extensively in Earth & Beyond
+            W3D_CHUNK_DAMAGE_HEADER,                                        // @ obsolete, ?
+            W3D_CHUNK_DAMAGE_VERTICES,                                      // @ obsolete, ?
+            W3D_CHUNK_DAMAGE_COLORS,                                        // @ obsolete, ?
+            W3D_CHUNK_DAMAGE_MATERIALS,                                     // @ obsolete, ?
         
-        O_W3D_CHUNK_MATERIALS2                          =0x00000014,        // @
+        O_W3D_CHUNK_MATERIALS2                          =0x00000014,        // @ obsolete, ?
         
-        W3D_CHUNK_MATERIALS3                            =0x00000015,        // @
-            W3D_CHUNK_MATERIAL3,
-            W3D_CHUNK_MATERIAL3_NAME,
-            W3D_CHUNK_MATERIAL3_INFO,
-            W3D_CHUNK_MATERIAL3_DC_MAP,                                     // @
-                W3D_CHUNK_MAP3_FILENAME,
-                W3D_CHUNK_MAP3_INFO,
-            W3D_CHUNK_MATERIAL3_DI_MAP,
-            W3D_CHUNK_MATERIAL3_SC_MAP,
-            W3D_CHUNK_MATERIAL3_SI_MAP,
+        W3D_CHUNK_MATERIALS3                            =0x00000015,        // @ obsolete, ?
+            W3D_CHUNK_MATERIAL3,                                            // @ obsolete, ?
+            W3D_CHUNK_MATERIAL3_NAME,                                       // @ obsolete, ?
+            W3D_CHUNK_MATERIAL3_INFO,                                       // @ obsolete, ?
+            W3D_CHUNK_MATERIAL3_DC_MAP,                                     // @ obsolete, ?
+                W3D_CHUNK_MAP3_FILENAME,                                    // @ obsolete, ?
+                W3D_CHUNK_MAP3_INFO,                                        // @ obsolete, ?
+            W3D_CHUNK_MATERIAL3_DI_MAP,                                     // @ obsolete, ?
+            W3D_CHUNK_MATERIAL3_SC_MAP,                                     // @ obsolete, ?
+            W3D_CHUNK_MATERIAL3_SI_MAP,                                     // @ obsolete, ?
         
         W3D_CHUNK_MESH_HEADER3                          =0x0000001F,        //  mesh header contains general info about the mesh. (W3dMeshHeader3Struct)
         W3D_CHUNK_TRIANGLES                             =0x00000020,        // New improved triangles chunk (array of W3dTriangleStruct's)
-        W3D_CHUNK_PER_TRI_MATERIALS                     =0x00000021,        // @
+        W3D_CHUNK_PER_TRI_MATERIALS                     =0x00000021,        // @ obsolete, ?
         W3D_CHUNK_VERTEX_SHADE_INDICES                  =0x00000022,        // shade indexes for each vertex (array of uint32's)
             
         W3D_CHUNK_PRELIT_UNLIT                          =0x00000023,        // optional unlit material chunk wrapper
@@ -71,14 +71,14 @@ enum ChunkType {
                 W3D_CHUNK_DCG                           =0x0000003B,        // per-vertex diffuse color values (array of W3dRGBAStruct's)
                 W3D_CHUNK_DIG                           =0x0000003C,        // per-vertex diffuse illumination values (array of W3dRGBStruct's)
                 W3D_CHUNK_SCG                           =0x0000003E,        // per-vertex specular color values (array of W3dRGBStruct's)
-                W3D_CHUNK_FXSHADER_IDS                  =0x0000003F,        // @  appears first in BFME2 seems, single or per-tri array of uint32 FXShader indices (check chunk size)
+                W3D_CHUNK_FXSHADER_IDS                  =0x0000003F,        // @ appears first in BFME2 seems, single or per-tri array of uint32 FXShader indices (check chunk size)
 
                 W3D_CHUNK_TEXTURE_STAGE                 =0x00000048,        // wrapper around a texture stage.
                     W3D_CHUNK_TEXTURE_IDS               =0x00000049,        // single or per-tri array of uint32 texture indices (check chunk size)
                     W3D_CHUNK_STAGE_TEXCOORDS           =0x0000004A,        // per-vertex texture coordinates (array of W3dTexCoordStruct's)
                     W3D_CHUNK_PER_FACE_TEXCOORD_IDS     =0x0000004B,        // indices to W3D_CHUNK_STAGE_TEXCOORDS, (array of Vector3i)
 
-        W3D_CHUNK_FX_SHADERS                            =0x00000050,        //@  appears first in BFME2 seems, W3D_CHUNK_FX_SHADERS
+        W3D_CHUNK_FX_SHADERS                            =0x00000050,        // @ appears first in BFME2 seems, W3D_CHUNK_FX_SHADERS
             W3D_CHUNK_FX_SHADER,
             W3D_CHUNK_FX_SHADER_INFO,
             W3D_CHUNK_FX_SHADER_CONSTANT,
