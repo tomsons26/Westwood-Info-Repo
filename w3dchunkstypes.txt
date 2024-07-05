@@ -12,7 +12,7 @@ enum ChunkType {
         W3D_CHUNK_TEXCOORDS                             =0x00000005,        // @ array of texture coordinates
         O_W3D_CHUNK_MATERIALS                           =0x00000006,        // @ array of materials
         O_W3D_CHUNK_TRIANGLES                           =0x00000007,        // @ array of triangles
-        O_W3D_CHUNK_QUADRANGLES                         =0x00000008,        // @
+        O_W3D_CHUNK_QUADRANGLES                         =0x00000008,        // @ array of surrender format quads
         O_W3D_CHUNK_SURRENDER_TRIANGLES                 =0x00000009,        // @ array of surrender format tris
         O_W3D_CHUNK_POV_TRIANGLES                       =0x0000000A,        // @
         O_W3D_CHUNK_POV_QUADRANGLES                     =0x0000000B,        // @
@@ -71,14 +71,14 @@ enum ChunkType {
                 W3D_CHUNK_DCG                           =0x0000003B,        // per-vertex diffuse color values (array of W3dRGBAStruct's)
                 W3D_CHUNK_DIG                           =0x0000003C,        // per-vertex diffuse illumination values (array of W3dRGBStruct's)
                 W3D_CHUNK_SCG                           =0x0000003E,        // per-vertex specular color values (array of W3dRGBStruct's)
-                W3D_CHUNK_FXSHADER_IDS                  =0x0000003F,        // @ single or per-tri array of uint32 FXShader indices (check chunk size)
+                W3D_CHUNK_FXSHADER_IDS                  =0x0000003F,        // @  appears first in BFME2 seems, single or per-tri array of uint32 FXShader indices (check chunk size)
 
                 W3D_CHUNK_TEXTURE_STAGE                 =0x00000048,        // wrapper around a texture stage.
                     W3D_CHUNK_TEXTURE_IDS               =0x00000049,        // single or per-tri array of uint32 texture indices (check chunk size)
                     W3D_CHUNK_STAGE_TEXCOORDS           =0x0000004A,        // per-vertex texture coordinates (array of W3dTexCoordStruct's)
                     W3D_CHUNK_PER_FACE_TEXCOORD_IDS     =0x0000004B,        // indices to W3D_CHUNK_STAGE_TEXCOORDS, (array of Vector3i)
 
-        W3D_CHUNK_FX_SHADERS                            =0x00000050,        //@ W3D_CHUNK_FX_SHADERS APPEARS FIRST IN BFME2 SEEMS
+        W3D_CHUNK_FX_SHADERS                            =0x00000050,        //@  appears first in BFME2 seems, W3D_CHUNK_FX_SHADERS
             W3D_CHUNK_FX_SHADER,
             W3D_CHUNK_FX_SHADER_INFO,
             W3D_CHUNK_FX_SHADER_CONSTANT,
@@ -88,8 +88,8 @@ enum ChunkType {
                 W3D_CHUNK_DEFORM_KEYFRAME               =0x0000005A,        // a keyframe of deform information in the set
                     W3D_CHUNK_DEFORM_DATA               =0x0000005B,        // deform information about a single vertex
 
-        W3D_CHUNK_TANGENTS                              =0x00000060,        // @
-        W3D_CHUNK_BINORMALS                             =0x00000061,        // @ some places on the web its called W3D_CHUNK_BITANGENTS
+        W3D_CHUNK_TANGENTS                              =0x00000060,        // @ appears first in BFME2 seems
+        W3D_CHUNK_BINORMALS                             =0x00000061,        // @ appears first in BFME2 seems, some places on the web its called W3D_CHUNK_BITANGENTS
 
         W3D_CHUNK_PS2_SHADERS                           =0x00000080,        // Shader info specific to the Playstation 2.
         
@@ -113,7 +113,7 @@ enum ChunkType {
         W3D_CHUNK_COMPRESSED_ANIMATION_HEADER,                              // describes playback rate, number of frames, and type of compression
         W3D_CHUNK_COMPRESSED_ANIMATION_CHANNEL,                             // compressed channel, format dependent on type of compression
         W3D_CHUNK_COMPRESSED_BIT_CHANNEL,                                   // compressed bit stream channel, format dependent on type of compression
-        W3D_CHUNK_COMPRESSED_ANIMATION_MOTION_CHANNEL,                      // @ appears first in BFME seems
+        W3D_CHUNK_COMPRESSED_ANIMATION_MOTION_CHANNEL,                      // @ appears first in BFME2 seems
         
     W3D_CHUNK_MORPH_ANIMATION                           =0x000002C0,        // hierarchy morphing animation data (morphs between poses, for facial animation)
         W3D_CHUNK_MORPHANIM_HEADER,                                         // W3dMorphAnimHeaderStruct describes playback rate, number of frames, and type of compression
@@ -161,7 +161,7 @@ enum ChunkType {
         W3D_CHUNK_EMITTER_ROTATION_KEYFRAMES,                               // rotation keys for the particles
         W3D_CHUNK_EMITTER_FRAME_KEYFRAMES,                                  // frame keys (u-v based frame animation)
         W3D_CHUNK_EMITTER_BLUR_TIME_KEYFRAMES,                              // length of tail for line groups
-        W3D_CHUNK_EMITTER_EXTRA_INFO,                                       // @ ParticleEmitterDefClass::Save_Extra_Info writes it, ENB has this https://github.com/therealKyp/Earth-and-Beyond-server/blob/master/trunk/Net7Tools/ChunkTypes/ChunkTypes.cpp#L184 //0x50d is in shockfizzle03.w3d
+        W3D_CHUNK_EMITTER_EXTRA_INFO,                                       // @ first appears in ENB, ParticleEmitterDefClass::Save_Extra_Info writes it, ENB has this https://github.com/therealKyp/Earth-and-Beyond-server/blob/master/trunk/Net7Tools/ChunkTypes/ChunkTypes.cpp#L184 //0x50d is in shockfizzle03.w3d
 
     W3D_CHUNK_AGGREGATE                                 =0x00000600,        // description of an aggregate object
         W3D_CHUNK_AGGREGATE_HEADER,                                         // general information such as name and version
@@ -215,8 +215,8 @@ enum ChunkType {
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_S,                               // @ read by ShdSubMeshClass::read_tangent_basis_s
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_T,                               // @ read by ShdSubMeshClass::read_tangent_basis_t
         W3D_CHUNK_SHDSUBMESH_TANGENT_BASIS_SXT,                             // @ read by ShdSubMeshClass::read_tangent_basis_sxt
-        W3D_CHUNK_SHDSUBMESH_B4C,                                           // @
-        W3D_CHUNK_SHDSUBMESH_VERTEX_INFLUENCES,                             // @
+        W3D_CHUNK_SHDSUBMESH_B4C,                                           // @ logically should had been there, read by ?
+        W3D_CHUNK_SHDSUBMESH_VERTEX_INFLUENCES,                             // @ read by ShdSubMeshClass::read_vertex_influences
 
     W3D_CHUNK_SECONDARY_VERTICES                        =0x00000C00,        // @ called VERTICES_COPY by the community
     W3D_CHUNK_SECONDARY_VERTEX_NORMALS,                                     // @ called VERTEX_NORMALS_COPY by the community
