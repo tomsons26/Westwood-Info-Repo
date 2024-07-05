@@ -220,6 +220,4 @@ enum ChunkType {
 
     W3D_CHUNK_SECONDARY_VERTICES                        =0x00000C00,        // @ called VERTICES_COPY by the community
     W3D_CHUNK_SECONDARY_VERTEX_NORMALS,                                     // @ called VERTEX_NORMALS_COPY by the community
-    
-    W3D_CHUNK_LIGHTMAP_UV                               =0x00000C02,        // @
 };
